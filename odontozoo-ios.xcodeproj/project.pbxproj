@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C848E28D96F7FD4BC120A7 /* Pods_odontozoo_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842805D3DCE6983567CAEE76 /* Pods_odontozoo_iosUITests.framework */; };
+		740F72FB51065464AEA12513 /* Pods_odontozoo_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2B77BA1A38068D4E447EB1 /* Pods_odontozoo_ios.framework */; };
 		A73767D41F79615500AE7A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767D31F79615500AE7A38 /* AppDelegate.swift */; };
-		A73767D61F79615500AE7A38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767D51F79615500AE7A38 /* ViewController.swift */; };
+		A73767D61F79615500AE7A38 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767D51F79615500AE7A38 /* SignInViewController.swift */; };
 		A73767D91F79615500AE7A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73767D71F79615500AE7A38 /* Main.storyboard */; };
 		A73767DC1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A73767DA1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld */; };
 		A73767DE1F79615500AE7A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73767DD1F79615500AE7A38 /* Assets.xcassets */; };
 		A73767E11F79615500AE7A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73767DF1F79615500AE7A38 /* LaunchScreen.storyboard */; };
 		A73767EC1F79615500AE7A38 /* odontozoo_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767EB1F79615500AE7A38 /* odontozoo_iosTests.swift */; };
 		A73767F71F79615500AE7A38 /* odontozoo_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767F61F79615500AE7A38 /* odontozoo_iosUITests.swift */; };
+		A73768051F7A113E00AE7A38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */; };
+		A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A151F7F00D6006FF242 /* Imagem.swift */; };
+		A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A181F7F023E006FF242 /* Usuario.swift */; };
+		A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */; };
+		A7BC2A211F7F3AFC006FF242 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A201F7F3AFC006FF242 /* UIViewController+Alerts.m */; };
+		BE3E186CF97443B0848839FB /* Pods_odontozoo_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023995BB3B10EB4A66913A2F /* Pods_odontozoo_iosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023995BB3B10EB4A66913A2F /* Pods_odontozoo_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_odontozoo_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D589F95783E167305B50DA /* Pods-odontozoo-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-iosUITests/Pods-odontozoo-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		569C673336E4F44019A91860 /* Pods-odontozoo-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-ios/Pods-odontozoo-ios.release.xcconfig"; sourceTree = "<group>"; };
+		6ECD0F1976585EE9C8B8C814 /* Pods-odontozoo-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-iosUITests/Pods-odontozoo-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7803564E29AE2F09606C8DDC /* Pods-odontozoo-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-iosTests/Pods-odontozoo-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		842805D3DCE6983567CAEE76 /* Pods_odontozoo_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_odontozoo_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2582341F51E7967893272DF /* Pods-odontozoo-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-ios/Pods-odontozoo-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		A73767D01F79615400AE7A38 /* odontozoo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "odontozoo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73767D31F79615500AE7A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A73767D51F79615500AE7A38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A73767D51F79615500AE7A38 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A73767D81F79615500AE7A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A73767DB1F79615500AE7A38 /* odontozoo_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = odontozoo_ios.xcdatamodel; sourceTree = "<group>"; };
 		A73767DD1F79615500AE7A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +64,15 @@
 		A73767F21F79615500AE7A38 /* odontozoo-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "odontozoo-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73767F61F79615500AE7A38 /* odontozoo_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = odontozoo_iosUITests.swift; sourceTree = "<group>"; };
 		A73767F81F79615500AE7A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7BC2A151F7F00D6006FF242 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagem.swift; sourceTree = "<group>"; };
+		A7BC2A181F7F023E006FF242 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Odontograma.swift; sourceTree = "<group>"; };
+		A7BC2A1E1F7F3A57006FF242 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
+		A7BC2A1F1F7F3AFB006FF242 /* odontozoo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "odontozoo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7BC2A201F7F3AFC006FF242 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
+		AE2B77BA1A38068D4E447EB1 /* Pods_odontozoo_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_odontozoo_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FB93D52BE707A96E52981F /* Pods-odontozoo-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-iosTests/Pods-odontozoo-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				740F72FB51065464AEA12513 /* Pods_odontozoo_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3E186CF97443B0848839FB /* Pods_odontozoo_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C848E28D96F7FD4BC120A7 /* Pods_odontozoo_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,8 @@
 				A73767EA1F79615500AE7A38 /* odontozoo-iosTests */,
 				A73767F51F79615500AE7A38 /* odontozoo-iosUITests */,
 				A73767D11F79615400AE7A38 /* Products */,
+				C1BE9321FED35484EDEEA83B /* Pods */,
+				E693099B8049B23C41FB9D34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +128,11 @@
 		A73767D21F79615400AE7A38 /* odontozoo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				A7BC2A1C1F7F39AE006FF242 /* Utils */,
+				A7BC2A171F7F01DC006FF242 /* entities */,
+				A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */,
 				A73767D31F79615500AE7A38 /* AppDelegate.swift */,
-				A73767D51F79615500AE7A38 /* ViewController.swift */,
+				A73767D51F79615500AE7A38 /* SignInViewController.swift */,
 				A73767D71F79615500AE7A38 /* Main.storyboard */,
 				A73767DD1F79615500AE7A38 /* Assets.xcassets */,
 				A73767DF1F79615500AE7A38 /* LaunchScreen.storyboard */,
@@ -128,6 +160,49 @@
 			path = "odontozoo-iosUITests";
 			sourceTree = "<group>";
 		};
+		A7BC2A171F7F01DC006FF242 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC2A151F7F00D6006FF242 /* Imagem.swift */,
+				A7BC2A181F7F023E006FF242 /* Usuario.swift */,
+				A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */,
+			);
+			name = entities;
+			sourceTree = "<group>";
+		};
+		A7BC2A1C1F7F39AE006FF242 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A7BC2A1E1F7F3A57006FF242 /* UIViewController+Alerts.h */,
+				A7BC2A201F7F3AFC006FF242 /* UIViewController+Alerts.m */,
+				A7BC2A1F1F7F3AFB006FF242 /* odontozoo-ios-Bridging-Header.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		C1BE9321FED35484EDEEA83B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2582341F51E7967893272DF /* Pods-odontozoo-ios.debug.xcconfig */,
+				569C673336E4F44019A91860 /* Pods-odontozoo-ios.release.xcconfig */,
+				7803564E29AE2F09606C8DDC /* Pods-odontozoo-iosTests.debug.xcconfig */,
+				C3FB93D52BE707A96E52981F /* Pods-odontozoo-iosTests.release.xcconfig */,
+				6ECD0F1976585EE9C8B8C814 /* Pods-odontozoo-iosUITests.debug.xcconfig */,
+				05D589F95783E167305B50DA /* Pods-odontozoo-iosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E693099B8049B23C41FB9D34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE2B77BA1A38068D4E447EB1 /* Pods_odontozoo_ios.framework */,
+				023995BB3B10EB4A66913A2F /* Pods_odontozoo_iosTests.framework */,
+				842805D3DCE6983567CAEE76 /* Pods_odontozoo_iosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A73767FB1F79615500AE7A38 /* Build configuration list for PBXNativeTarget "odontozoo-ios" */;
 			buildPhases = (
+				B7BBF54385C33A71354C1321 /* [CP] Check Pods Manifest.lock */,
 				A73767CC1F79615400AE7A38 /* Sources */,
 				A73767CD1F79615400AE7A38 /* Frameworks */,
 				A73767CE1F79615400AE7A38 /* Resources */,
+				FEA8B0A2F75DFC056FB32B8A /* [CP] Embed Pods Frameworks */,
+				2F1852A69D9074AEE45B7EE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A73767FE1F79615500AE7A38 /* Build configuration list for PBXNativeTarget "odontozoo-iosTests" */;
 			buildPhases = (
+				BC8B0F0D7BB515AEF49201E2 /* [CP] Check Pods Manifest.lock */,
 				A73767E31F79615500AE7A38 /* Sources */,
 				A73767E41F79615500AE7A38 /* Frameworks */,
 				A73767E51F79615500AE7A38 /* Resources */,
+				EF5D713A7784AFC1EDAD9CBE /* [CP] Embed Pods Frameworks */,
+				6264852E27E99214F8B16F30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A73768011F79615500AE7A38 /* Build configuration list for PBXNativeTarget "odontozoo-iosUITests" */;
 			buildPhases = (
+				7BE70F80C3954709D0E3DD2B /* [CP] Check Pods Manifest.lock */,
 				A73767EE1F79615500AE7A38 /* Sources */,
 				A73767EF1F79615500AE7A38 /* Frameworks */,
 				A73767F01F79615500AE7A38 /* Resources */,
+				1E515E8D8D681664929AE941 /* [CP] Embed Pods Frameworks */,
+				9D913733C18FB29908F25641 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +281,7 @@
 					A73767CF1F79615400AE7A38 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 55X7XV56SM;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					A73767E61F79615500AE7A38 = {
@@ -239,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73767E11F79615500AE7A38 /* LaunchScreen.storyboard in Resources */,
+				A73768051F7A113E00AE7A38 /* GoogleService-Info.plist in Resources */,
 				A73767DE1F79615500AE7A38 /* Assets.xcassets in Resources */,
 				A73767D91F79615500AE7A38 /* Main.storyboard in Resources */,
 			);
@@ -260,14 +346,174 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E515E8D8D681664929AE941 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-odontozoo-iosUITests/Pods-odontozoo-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F1852A69D9074AEE45B7EE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-odontozoo-ios/Pods-odontozoo-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6264852E27E99214F8B16F30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-odontozoo-iosTests/Pods-odontozoo-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BE70F80C3954709D0E3DD2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-odontozoo-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D913733C18FB29908F25641 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-odontozoo-iosUITests/Pods-odontozoo-iosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7BBF54385C33A71354C1321 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-odontozoo-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC8B0F0D7BB515AEF49201E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-odontozoo-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF5D713A7784AFC1EDAD9CBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-odontozoo-iosTests/Pods-odontozoo-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEA8B0A2F75DFC056FB32B8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-odontozoo-ios/Pods-odontozoo-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-odontozoo-ios/Pods-odontozoo-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A73767CC1F79615400AE7A38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A73767DC1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld in Sources */,
-				A73767D61F79615500AE7A38 /* ViewController.swift in Sources */,
+				A7BC2A211F7F3AFC006FF242 /* UIViewController+Alerts.m in Sources */,
+				A73767D61F79615500AE7A38 /* SignInViewController.swift in Sources */,
 				A73767D41F79615500AE7A38 /* AppDelegate.swift in Sources */,
+				A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */,
+				A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */,
+				A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,32 +663,40 @@
 		};
 		A73767FC1F79615500AE7A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2582341F51E7967893272DF /* Pods-odontozoo-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 55X7XV56SM;
 				INFOPLIST_FILE = "odontozoo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.unisinos.odontozoo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "odontozoo-ios/odontozoo-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A73767FD1F79615500AE7A38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 569C673336E4F44019A91860 /* Pods-odontozoo-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 55X7XV56SM;
 				INFOPLIST_FILE = "odontozoo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.unisinos.odontozoo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "odontozoo-ios/odontozoo-ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		A73767FF1F79615500AE7A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7803564E29AE2F09606C8DDC /* Pods-odontozoo-iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +712,7 @@
 		};
 		A73768001F79615500AE7A38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3FB93D52BE707A96E52981F /* Pods-odontozoo-iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +728,7 @@
 		};
 		A73768021F79615500AE7A38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECD0F1976585EE9C8B8C814 /* Pods-odontozoo-iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 55X7XV56SM;
@@ -487,6 +743,7 @@
 		};
 		A73768031F79615500AE7A38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D589F95783E167305B50DA /* Pods-odontozoo-iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 55X7XV56SM;
@@ -518,6 +775,7 @@
 				A73767FD1F79615500AE7A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73767FE1F79615500AE7A38 /* Build configuration list for PBXNativeTarget "odontozoo-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +784,7 @@
 				A73768001F79615500AE7A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73768011F79615500AE7A38 /* Build configuration list for PBXNativeTarget "odontozoo-iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +793,7 @@
 				A73768031F79615500AE7A38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
