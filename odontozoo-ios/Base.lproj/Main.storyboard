@@ -35,7 +35,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeA-Kp-pwa">
                                 <rect key="frame" x="36" y="285" width="303" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Sign In">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -54,6 +54,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6R3-pm-lPq">
                                         <rect key="frame" x="97.5" y="0.0" width="95" height="30"/>
                                         <state key="normal" title="REGISTRE-SE"/>
+                                        <connections>
+                                            <segue destination="4j0-YY-8Fs" kind="show" identifier="LoginToRegister" id="zcZ-Jh-Fmk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -86,6 +89,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="raM-VN-aBU">
+            <objects>
+                <viewController id="4j0-YY-8Fs" userLabel="Register View Controller" customClass="RegisterViewController" customModule="odontozoo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C3a-SB-mKo"/>
+                        <viewControllerLayoutGuide type="bottom" id="ctt-tG-lJb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ANd-EG-pe8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3f-pQ-LoM">
+                                <rect key="frame" x="36" y="185" width="303" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORm-Lm-QEe">
+                                <rect key="frame" x="36" y="235" width="303" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsn-i8-zES">
+                                <rect key="frame" x="36" y="285" width="303" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Registrar-se">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VuZ-1g-AbQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yOp-PU-Cze">
+                                <rect key="frame" x="82" y="335" width="211.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J[A TEM CONTA?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AO4-SH-U8g">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ui-Hv-skA">
+                                        <rect key="frame" x="124.5" y="0.0" width="87" height="30"/>
+                                        <state key="normal" title="FAÇA LOGIN"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ILK-Ib-ecV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ORm-Lm-QEe" firstAttribute="leading" secondItem="Jsn-i8-zES" secondAttribute="leading" id="LMD-tI-llZ"/>
+                            <constraint firstItem="U3f-pQ-LoM" firstAttribute="centerX" secondItem="ANd-EG-pe8" secondAttribute="centerX" id="MWm-3O-xRw"/>
+                            <constraint firstItem="Jsn-i8-zES" firstAttribute="top" secondItem="ORm-Lm-QEe" secondAttribute="bottom" constant="20" id="ONT-2w-Ezd"/>
+                            <constraint firstItem="ORm-Lm-QEe" firstAttribute="trailing" secondItem="Jsn-i8-zES" secondAttribute="trailing" id="Q0u-2g-cRY"/>
+                            <constraint firstItem="ORm-Lm-QEe" firstAttribute="trailing" secondItem="U3f-pQ-LoM" secondAttribute="trailing" id="VgY-V8-4z1"/>
+                            <constraint firstItem="Jsn-i8-zES" firstAttribute="centerX" secondItem="yOp-PU-Cze" secondAttribute="centerX" id="hRY-Pn-aL3"/>
+                            <constraint firstItem="U3f-pQ-LoM" firstAttribute="leading" secondItem="ANd-EG-pe8" secondAttribute="leadingMargin" constant="20" id="q5w-jo-K6o"/>
+                            <constraint firstItem="ORm-Lm-QEe" firstAttribute="leading" secondItem="U3f-pQ-LoM" secondAttribute="leading" id="qhu-LV-ML6"/>
+                            <constraint firstItem="U3f-pQ-LoM" firstAttribute="top" secondItem="C3a-SB-mKo" secondAttribute="bottom" constant="165" id="qoh-0k-ikp"/>
+                            <constraint firstItem="yOp-PU-Cze" firstAttribute="top" secondItem="Jsn-i8-zES" secondAttribute="bottom" constant="20" id="rWL-gu-PhH"/>
+                            <constraint firstItem="ORm-Lm-QEe" firstAttribute="top" secondItem="U3f-pQ-LoM" secondAttribute="bottom" constant="20" id="wmU-FR-xo4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPZ-5p-yar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="70"/>
         </scene>
     </scenes>
 </document>

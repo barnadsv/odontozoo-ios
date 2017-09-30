@@ -18,10 +18,11 @@
 		A73767EC1F79615500AE7A38 /* odontozoo_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767EB1F79615500AE7A38 /* odontozoo_iosTests.swift */; };
 		A73767F71F79615500AE7A38 /* odontozoo_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767F61F79615500AE7A38 /* odontozoo_iosUITests.swift */; };
 		A73768051F7A113E00AE7A38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */; };
+		A7AA702F1F80543D00835DF2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA702E1F80543D00835DF2 /* RegisterViewController.swift */; };
+		A7AA70331F80593500835DF2 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70301F80593500835DF2 /* UIViewController+Alerts.m */; };
 		A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A151F7F00D6006FF242 /* Imagem.swift */; };
 		A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A181F7F023E006FF242 /* Usuario.swift */; };
 		A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */; };
-		A7BC2A211F7F3AFC006FF242 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A201F7F3AFC006FF242 /* UIViewController+Alerts.m */; };
 		BE3E186CF97443B0848839FB /* Pods_odontozoo_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023995BB3B10EB4A66913A2F /* Pods_odontozoo_iosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,12 +66,13 @@
 		A73767F61F79615500AE7A38 /* odontozoo_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = odontozoo_iosUITests.swift; sourceTree = "<group>"; };
 		A73767F81F79615500AE7A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7AA702E1F80543D00835DF2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A7AA70301F80593500835DF2 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
+		A7AA70311F80593500835DF2 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
+		A7AA70341F8059A900835DF2 /* odontozoo-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "odontozoo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7BC2A151F7F00D6006FF242 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagem.swift; sourceTree = "<group>"; };
 		A7BC2A181F7F023E006FF242 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Odontograma.swift; sourceTree = "<group>"; };
-		A7BC2A1E1F7F3A57006FF242 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
-		A7BC2A1F1F7F3AFB006FF242 /* odontozoo-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "odontozoo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
-		A7BC2A201F7F3AFC006FF242 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
 		AE2B77BA1A38068D4E447EB1 /* Pods_odontozoo_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_odontozoo_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3FB93D52BE707A96E52981F /* Pods-odontozoo-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-iosTests/Pods-odontozoo-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 				A73767DF1F79615500AE7A38 /* LaunchScreen.storyboard */,
 				A73767E21F79615500AE7A38 /* Info.plist */,
 				A73767DA1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld */,
+				A7AA702E1F80543D00835DF2 /* RegisterViewController.swift */,
 			);
 			path = "odontozoo-ios";
 			sourceTree = "<group>";
@@ -173,9 +176,9 @@
 		A7BC2A1C1F7F39AE006FF242 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A7BC2A1E1F7F3A57006FF242 /* UIViewController+Alerts.h */,
-				A7BC2A201F7F3AFC006FF242 /* UIViewController+Alerts.m */,
-				A7BC2A1F1F7F3AFB006FF242 /* odontozoo-ios-Bridging-Header.h */,
+				A7AA70341F8059A900835DF2 /* odontozoo-ios-Bridging-Header.h */,
+				A7AA70301F80593500835DF2 /* UIViewController+Alerts.m */,
+				A7AA70311F80593500835DF2 /* UIViewController+Alerts.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -508,12 +511,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73767DC1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld in Sources */,
-				A7BC2A211F7F3AFC006FF242 /* UIViewController+Alerts.m in Sources */,
 				A73767D61F79615500AE7A38 /* SignInViewController.swift in Sources */,
+				A7AA702F1F80543D00835DF2 /* RegisterViewController.swift in Sources */,
 				A73767D41F79615500AE7A38 /* AppDelegate.swift in Sources */,
 				A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */,
 				A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */,
 				A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */,
+				A7AA70331F80593500835DF2 /* UIViewController+Alerts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
