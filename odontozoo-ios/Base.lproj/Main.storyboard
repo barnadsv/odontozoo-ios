@@ -35,7 +35,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeA-Kp-pwa">
                                 <rect key="frame" x="36" y="285" width="303" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="FAZER LOGIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNj-hY-4LA">
                                 <rect key="frame" x="100" y="385" width="174" height="30"/>
                                 <state key="normal" title="ESQUECEU SUA SENHA?"/>
+                                <connections>
+                                    <action selector="didTapResetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oxd-dJ-Xed"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,6 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="82" y="467"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="raM-VN-aBU">
@@ -159,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPZ-5p-yar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="70"/>
+            <point key="canvasLocation" x="972" y="-236"/>
         </scene>
     </scenes>
 </document>

@@ -204,7 +204,7 @@ NS_DESIGNATED_INITIALIZER;
         return;
     }
     pleaseWaitAlert = [UIAlertController alertControllerWithTitle:nil
-                                                          message:@"Please Wait...\n\n\n\n"
+                                                          message:@"Aguarde...\n\n\n\n"
                                                    preferredStyle:UIAlertControllerStyleAlert];
     
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]

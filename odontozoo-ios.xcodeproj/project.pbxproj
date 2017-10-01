@@ -10,7 +10,6 @@
 		05C848E28D96F7FD4BC120A7 /* Pods_odontozoo_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842805D3DCE6983567CAEE76 /* Pods_odontozoo_iosUITests.framework */; };
 		740F72FB51065464AEA12513 /* Pods_odontozoo_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2B77BA1A38068D4E447EB1 /* Pods_odontozoo_ios.framework */; };
 		A73767D41F79615500AE7A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767D31F79615500AE7A38 /* AppDelegate.swift */; };
-		A73767D61F79615500AE7A38 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73767D51F79615500AE7A38 /* SignInViewController.swift */; };
 		A73767D91F79615500AE7A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73767D71F79615500AE7A38 /* Main.storyboard */; };
 		A73767DC1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A73767DA1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld */; };
 		A73767DE1F79615500AE7A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73767DD1F79615500AE7A38 /* Assets.xcassets */; };
@@ -20,6 +19,7 @@
 		A73768051F7A113E00AE7A38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */; };
 		A7AA702F1F80543D00835DF2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA702E1F80543D00835DF2 /* RegisterViewController.swift */; };
 		A7AA70331F80593500835DF2 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70301F80593500835DF2 /* UIViewController+Alerts.m */; };
+		A7AA70361F80662C00835DF2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70351F80662C00835DF2 /* SignInViewController.swift */; };
 		A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A151F7F00D6006FF242 /* Imagem.swift */; };
 		A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A181F7F023E006FF242 /* Usuario.swift */; };
 		A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */; };
@@ -53,7 +53,6 @@
 		A2582341F51E7967893272DF /* Pods-odontozoo-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-odontozoo-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-odontozoo-ios/Pods-odontozoo-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		A73767D01F79615400AE7A38 /* odontozoo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "odontozoo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73767D31F79615500AE7A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A73767D51F79615500AE7A38 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A73767D81F79615500AE7A38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A73767DB1F79615500AE7A38 /* odontozoo_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = odontozoo_ios.xcdatamodel; sourceTree = "<group>"; };
 		A73767DD1F79615500AE7A38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		A7AA70301F80593500835DF2 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
 		A7AA70311F80593500835DF2 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
 		A7AA70341F8059A900835DF2 /* odontozoo-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "odontozoo-ios-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7AA70351F80662C00835DF2 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A7BC2A151F7F00D6006FF242 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagem.swift; sourceTree = "<group>"; };
 		A7BC2A181F7F023E006FF242 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Odontograma.swift; sourceTree = "<group>"; };
@@ -130,11 +130,11 @@
 		A73767D21F79615400AE7A38 /* odontozoo-ios */ = {
 			isa = PBXGroup;
 			children = (
+				A7AA70351F80662C00835DF2 /* SignInViewController.swift */,
 				A7BC2A1C1F7F39AE006FF242 /* Utils */,
 				A7BC2A171F7F01DC006FF242 /* entities */,
 				A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */,
 				A73767D31F79615500AE7A38 /* AppDelegate.swift */,
-				A73767D51F79615500AE7A38 /* SignInViewController.swift */,
 				A73767D71F79615500AE7A38 /* Main.storyboard */,
 				A73767DD1F79615500AE7A38 /* Assets.xcassets */,
 				A73767DF1F79615500AE7A38 /* LaunchScreen.storyboard */,
@@ -511,10 +511,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73767DC1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld in Sources */,
-				A73767D61F79615500AE7A38 /* SignInViewController.swift in Sources */,
 				A7AA702F1F80543D00835DF2 /* RegisterViewController.swift in Sources */,
 				A73767D41F79615500AE7A38 /* AppDelegate.swift in Sources */,
 				A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */,
+				A7AA70361F80662C00835DF2 /* SignInViewController.swift in Sources */,
 				A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */,
 				A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */,
 				A7AA70331F80593500835DF2 /* UIViewController+Alerts.m in Sources */,

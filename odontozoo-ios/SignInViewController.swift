@@ -81,6 +81,50 @@ class SignInViewController: UIViewController {
         
     }
     
+    @IBAction func didTapResetPassword(_ sender: Any) {
+        
+        let prompt = UIAlertController(title: "Odontozoo", message: "Email:", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            let userInput = prompt.textFields![0].text
+            if (userInput!.isEmpty) {
+                return
+            }
+            self.showSpinner {
+                // [START password_reset]
+                Auth.auth().sendPasswordReset(withEmail: userInput!, completion: { (error) in
+                    // [START_EXCLUDE]
+                    self.hideSpinner {
+                        if let error = error {
+                            if let errCode = AuthErrorCode(rawValue: error._code) {
+                                switch errCode {
+                                case .userNotFound:
+                                    DispatchQueue.main.async {
+                                        self.showAlert("Conta de usuário não encontrada.")
+                                    }
+                                default:
+                                    DispatchQueue.main.async {
+                                        self.showAlert("Erro: \(error.localizedDescription)")
+                                    }
+                                }
+                            }
+                            return
+                        } else {
+                            DispatchQueue.main.async {
+                                self.showAlert("Você receberá um e-mail em breve para redefinir sua senha.")
+                            }
+                        }
+                    }
+                    // [END_EXCLUDE]
+                })
+                // [END password_reset]
+            }
+        }
+        prompt.addTextField(configurationHandler: nil)
+        prompt.addAction(okAction)
+        present(prompt, animated: true, completion: nil)
+    }
+    
+    
     func showAlert(_ message: String) {
         let alertController = UIAlertController(title: "Odontozoo", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
