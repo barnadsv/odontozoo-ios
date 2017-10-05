@@ -88,6 +88,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="SCj-IN-Y96" id="eI7-S2-oXA"/>
                         <outlet property="passwordTextField" destination="eTO-eN-DPg" id="2E8-6N-sHC"/>
+                        <segue destination="wa0-U8-HPm" kind="show" identifier="signInFromLogin" id="hzv-R5-Oll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,10 +161,63 @@
                             <constraint firstItem="ORm-Lm-QEe" firstAttribute="top" secondItem="U3f-pQ-LoM" secondAttribute="bottom" constant="20" id="wmU-FR-xo4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="wa0-U8-HPm" kind="show" identifier="signInFromRegister" id="JS8-4I-uUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPZ-5p-yar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="-236"/>
+            <point key="canvasLocation" x="81" y="-266"/>
+        </scene>
+        <!--Odontograma List View Controller-->
+        <scene sceneID="0cl-BC-8Ql">
+            <objects>
+                <tableViewController id="a6w-fR-Oax" userLabel="Odontograma List View Controller" customClass="OdontogramaListViewController" customModule="odontozoo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zFn-Y0-O6g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OdontogramaCell" id="2bx-l1-KQ9">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="odontogramaCell" tableViewCell="2bx-l1-KQ9" id="T1K-XR-kCh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="a6w-fR-Oax" id="IwR-hI-8d8"/>
+                            <outlet property="delegate" destination="a6w-fR-Oax" id="Nad-IF-0px"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Odontogramas" id="xtQ-AA-pB6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJZ-vi-mbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dO1-tX-4Te">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wa0-U8-HPm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cgk-sr-wfU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a6w-fR-Oax" kind="relationship" relationship="rootViewController" id="zDu-As-zTk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTw-l4-np2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="125"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JS8-4I-uUS"/>
+    </inferredMetricsTieBreakers>
 </document>
