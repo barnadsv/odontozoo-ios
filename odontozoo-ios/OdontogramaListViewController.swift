@@ -25,21 +25,12 @@ class OdontogramaListViewController: UITableViewController {
         
         tableView.allowsMultipleSelectionDuringEditing = false
         
-        /*ref.observe(.childAdded, with: { (snapshot) -> Void in
-            self.odontogramas.append(snapshot)
-            self.tableView.insertRows(at: [IndexPath(row: self.odontogramas.count-1)], with: UITableViewRowAnimation.automatic)
-        })*/
-        
-        //observing the data changes
         ref.observe(DataEventType.value, with: { (snapshot) in
             
-            //if the reference have some values
             if snapshot.childrenCount > 0 {
                 
-                //clearing the list
                 self.odontogramas.removeAll()
                 
-                //iterating through all the values
                 for itens in snapshot.children.allObjects as! [DataSnapshot] {
                     
                     let itemList = itens.value as? [String: AnyObject]
@@ -47,7 +38,6 @@ class OdontogramaListViewController: UITableViewController {
                     for item in itemList! {
                     
                         //let key = item.key
-                    
                         let odontogramaObject = item.value as? [String: AnyObject]
                         let id  = odontogramaObject?["id"]
                         let emailUsuario  = odontogramaObject?["emailUsuario"]
@@ -85,66 +75,15 @@ class OdontogramaListViewController: UITableViewController {
                         
                         
                     }
-                    //getting values
                     
                 }
                 
-                //reloading the tableview
                 self.tableView.reloadData()
             }
         })
         
-        /*ref.queryOrdered(byChild: "nomeAnimal").observe(.childAdded, with: { snapshot in
-            
-            let getData = snapshot.value as? [String:AnyObject]
-            
-            let odontograma = Odontograma(
-                id: getData["id"],
-                emailUsuario: getData["emailUsuario"],
-                nomeUsuario: getData["nomeUsuario"],
-                nomeProprietario: getData["nomeProprietario"],
-                nomeAnimal: getData["nomeAnimal"],
-                familiaAnimal: getData["familiaAnimal"],
-                racaAnimal: getData["racaAnimal"],
-                idadeAnimal: getData["idadeAnimal"],
-                sexoAnimal: getData["sexoAnimal"],
-                dataCriacao: getData["dataCriacao"],
-                dataUltimaAlteracao: getData["dataUltimaAlteracao"]
-            )
-            self.odontogramas.append(odontograma)
-            self.tableView.reloadData()
-        })*/
-        /*ref.queryOrdered(byChild: "nomeAnimal").observe(.childAdded, with: { snapshot in
-            
-            let item = snapshot.value as? DataSnapshot
-            //for item in snapshot.children {
-                //let odontogramaItem = Odontograma()
-                //odontogramaItem.id = item
-            let odontogramaItem = Odontograma(snapshot: item!)
-                self.odontogramas.append(odontogramaItem)
-            //}
-            
-            //self.odontogramas = novosOdontogramas
-            self.tableView.reloadData()
-        })
-
-        
-        ref.queryOrdered(byChild: "nomeAnimal").observe(.value, with: { snapshot in
-            var novosOdontogramas: [Odontograma] = []
-            
-            for item in snapshot.children {
-                //let odontogramaItem = Odontograma()
-                //odontogramaItem.id = item
-                let odontogramaItem = Odontograma(snapshot: item as! DataSnapshot)
-                novosOdontogramas.append(odontogramaItem)
-            }
-            
-            self.odontogramas = novosOdontogramas
-            self.tableView.reloadData()
-        })*/
-        
         Auth.auth().addStateDidChangeListener { auth, user in
-            guard let user = user else { return }
+            guard user != nil else { return }
             /*self.user = User(authData: user)
             let currentUserRef = self.usersRef.child(self.user.uid)
             currentUserRef.setValue(self.user.email)
@@ -154,12 +93,13 @@ class OdontogramaListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OdontogramaCell", for: indexPath)
+        
         let odontogramaItem = odontogramas[indexPath.row]
         
+        //cell.nomeAnimalLabel.text = odontogramaItem.nomeAnimal
+        //cell.racaAnimalLabel.text = odontogramaItem.racaAnimal
         cell.textLabel?.text = odontogramaItem.nomeAnimal
         cell.detailTextLabel?.text = odontogramaItem.racaAnimal
-        
-        //toggleCellCheckbox(cell, isCompleted: groceryItem.completed)
         
         return cell
     }
