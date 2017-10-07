@@ -7,19 +7,28 @@
 //
 
 import Foundation
+import Firebase
 
 public struct Usuario {
     
     public var email: String
     public var nome: String
-    public var dataCadastro: [String : Double]
+    //public var dataCadastro: [String : Double]
+    public var dataCadastro: NSDate
     public var logouComSenha: Bool
     
-    init(email: String, nome: String, dataCadastro: [String : Double], logouComSenha: Bool) {
+    init(email: String, nome: String, dataCadastro: NSDate, logouComSenha: Bool) {
         self.email = email
         self.nome = nome
         self.dataCadastro = dataCadastro
         self.logouComSenha = logouComSenha
+    }
+    
+    init() {
+        self.email = ""
+        self.nome = ""
+        self.dataCadastro = NSDate()
+        self.logouComSenha = false
     }
     
 }

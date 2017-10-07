@@ -14,6 +14,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var ref: DatabaseReference!
+    var usuario: Usuario!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,11 @@ class SignInViewController: UIViewController {
                             // Check if user already exists
                             guard !snapshot.exists() else {
                                 self.ref.child("usuarios/"+encodedEmail+"/logouComSenha").setValue(true)
+                                let value = snapshot.value as? NSDictionary
+                                let nome = value?["nome"] as? String ?? ""
+                                //let dataCadastro = value?["dataCadastro"] as? ["String":"Double"]
+                                
+                                //self.usuario = Usuario(email: email, nome: nome, dataCadastro: dataCadastro, logouComSenha: true)
                                 self.signIn()
                                 return
                             }
@@ -111,7 +117,8 @@ class SignInViewController: UIViewController {
         
         if segue.identifier == "signInFromLogin" {
             if let toViewController = segue.destination as? OdontogramaListViewController {
-                toViewController.logouComSenha = true
+                //toViewController.logouComSenha = true
+                toViewController.usuario = self.usuario
             }
         }
     }
