@@ -17,6 +17,19 @@ class OdontogramaListViewController: UITableViewController {
     let usuarioRef = Database.database().reference(withPath: "usuarios")
     var usuario: Usuario!
     //var logouComSenha: Bool!
+    var id: String?
+    var emailUsuario: String?
+    var nomeUsuario: String?
+    var nomeProprietario: String?
+    var nomeAnimal: String?
+    var familiaAnimal: String?
+    var racaAnimal: String?
+    var idadeAnimal: Int?
+    var sexoAnimal: String?
+    //    var tipoOdontograma: String
+    //    var urlFotos: String[]
+    var dataCriacao: NSDate?
+    var dataUltimaAlteracao: NSDate?
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (odontogramas.count)
@@ -120,6 +133,44 @@ class OdontogramaListViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let row = indexPath.row
+        print("Row: \(row)")
+        
+        id = self.odontogramas[row].id
+        emailUsuario = self.odontogramas[row].emailUsuario
+        nomeUsuario = self.odontogramas[row].nomeUsuario
+        nomeProprietario = self.odontogramas[row].nomeProprietario
+        nomeAnimal = self.odontogramas[row].nomeAnimal
+        familiaAnimal = self.odontogramas[row].familiaAnimal
+        racaAnimal = self.odontogramas[row].racaAnimal
+        idadeAnimal = self.odontogramas[row].idadeAnimal
+        sexoAnimal = self.odontogramas[row].sexoAnimal
+        dataCriacao = self.odontogramas[row].dataCriacao
+        dataUltimaAlteracao = self.odontogramas[row].dataUltimaAlteracao
+        
+        performSegue(withIdentifier: "segueToDetailView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueToDetailView") {
+            let odontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
+            odontogramaDetailViewController.id = id!
+            odontogramaDetailViewController.emailUsuario = emailUsuario!
+            odontogramaDetailViewController.nomeUsuario = nomeUsuario!
+            odontogramaDetailViewController.nomeProprietario = nomeProprietario!
+            odontogramaDetailViewController.nomeAnimal = nomeAnimal!
+            odontogramaDetailViewController.familiaAnimal = familiaAnimal!
+            odontogramaDetailViewController.racaAnimal = racaAnimal!
+            odontogramaDetailViewController.idadeAnimal = idadeAnimal!
+            odontogramaDetailViewController.sexoAnimal = sexoAnimal!
+            odontogramaDetailViewController.dataCriacao = dataCriacao!
+            odontogramaDetailViewController.dataUltimaAlteracao = dataUltimaAlteracao!
+        }
+    }
+
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {

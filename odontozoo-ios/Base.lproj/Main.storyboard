@@ -201,6 +201,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="CVl-e0-JUt" kind="show" identifier="segueToDetailView" id="0uU-5q-V4F"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -209,6 +212,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJZ-vi-mbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736.8" y="124.58770614692655"/>
+        </scene>
+        <!--Odontograma Detail View Controller-->
+        <scene sceneID="5Qz-Xi-3Xb">
+            <objects>
+                <viewController id="VVw-Ln-LD8" userLabel="Odontograma Detail View Controller" customClass="OdontogramaDetailViewController" customModule="odontozoo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="71p-SJ-Pty"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Gs-K2-wwD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4l3-Ud-74V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CdF-yf-1CW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPB-OH-4nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3668" y="124.58770614692655"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dO1-tX-4Te">
@@ -227,6 +249,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTw-l4-np2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="962" y="125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="riH-qq-TNn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CVl-e0-JUt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="sDy-XB-wHX">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VVw-Ln-LD8" kind="relationship" relationship="viewControllers" id="3SP-su-Gmr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rqp-Ec-J5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728.8000000000002" y="124.58770614692655"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

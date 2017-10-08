@@ -23,6 +23,7 @@
 		A7AA70381F80855200835DF2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70371F80855200835DF2 /* Utils.swift */; };
 		A7AA703A1F8474A800835DF2 /* OdontogramaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70391F8474A800835DF2 /* OdontogramaListViewController.swift */; };
 		A7AA703C1F86AA2D00835DF2 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA703B1F86AA2D00835DF2 /* ImageTableViewCell.swift */; };
+		A7AA70401F89ABE500835DF2 /* OdontogramaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA703F1F89ABE500835DF2 /* OdontogramaDetailViewController.swift */; };
 		A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A151F7F00D6006FF242 /* Imagem.swift */; };
 		A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A181F7F023E006FF242 /* Usuario.swift */; };
 		A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */; };
@@ -76,6 +77,7 @@
 		A7AA70371F80855200835DF2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A7AA70391F8474A800835DF2 /* OdontogramaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaListViewController.swift; sourceTree = "<group>"; };
 		A7AA703B1F86AA2D00835DF2 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		A7AA703F1F89ABE500835DF2 /* OdontogramaDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaDetailViewController.swift; sourceTree = "<group>"; };
 		A7BC2A151F7F00D6006FF242 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagem.swift; sourceTree = "<group>"; };
 		A7BC2A181F7F023E006FF242 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Odontograma.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				A7AA702E1F80543D00835DF2 /* RegisterViewController.swift */,
 				A7AA70391F8474A800835DF2 /* OdontogramaListViewController.swift */,
 				A7AA703B1F86AA2D00835DF2 /* ImageTableViewCell.swift */,
+				A7AA703F1F89ABE500835DF2 /* OdontogramaDetailViewController.swift */,
 			);
 			path = "odontozoo-ios";
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				A7AA703C1F86AA2D00835DF2 /* ImageTableViewCell.swift in Sources */,
 				A73767D41F79615500AE7A38 /* AppDelegate.swift in Sources */,
 				A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */,
+				A7AA70401F89ABE500835DF2 /* OdontogramaDetailViewController.swift in Sources */,
 				A7AA70361F80662C00835DF2 /* SignInViewController.swift in Sources */,
 				A7AA703A1F8474A800835DF2 /* OdontogramaListViewController.swift in Sources */,
 				A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */,
