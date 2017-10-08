@@ -12,7 +12,8 @@ import Firebase
 class OdontogramaListViewController: UITableViewController {
     
     var odontogramas: [Odontograma] = []
-    let ref = Database.database().reference(withPath: "odontogramasList/")
+    let odontogramasRef = Database.database().reference(withPath: "odontogramasList/")
+    let imagesRef = Database.database().reference(withPath: "odontogramaImagesList/")
     let usuarioRef = Database.database().reference(withPath: "usuarios")
     var usuario: Usuario!
     //var logouComSenha: Bool!
@@ -26,7 +27,7 @@ class OdontogramaListViewController: UITableViewController {
         
         tableView.allowsMultipleSelectionDuringEditing = false
         
-        ref.observe(DataEventType.value, with: { (snapshot) in
+        odontogramasRef.observe(DataEventType.value, with: { (snapshot) in
             
             if snapshot.childrenCount > 0 {
                 
@@ -123,12 +124,29 @@ class OdontogramaListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             let id = odontogramas[indexPath.row].id
-            self.ref.child(Utils.encodeEmail(email: self.usuario.email)+"/"+id).removeValue()
-            odontogramas.remove(at: indexPath.row)
+            
+            imagesRef.child(id).observeSingleEvent(of: .value, with: { snapshot in
+                for child in snapshot.children {
+                    let snap = child as! DataSnapshot
+                    //let key = snap.key
+                    let value = snap.value as? [String: AnyObject]
+                    let storageId = value?["storageId"] as! String
+                    let imagesStorage = Storage.storage().reference(forURL: "gs://odontozoo-345a7.appspot.com/odontogramaImagesList/" + id + "/" + storageId)
+                    imagesStorage.delete { error in
+                        if error != nil {
+                            // Uh-oh, an error occurred!
+                        } else {
+                            
+                        }
+                    }
+                }
+            })
+            self.imagesRef.child(id).removeValue()
+            self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)+"/"+id).removeValue()
+            self.odontogramas.remove(at: indexPath.row)
             self.tableView.reloadData()
+            
         }
     }
-
-
 
 }
