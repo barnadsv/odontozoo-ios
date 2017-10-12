@@ -92,7 +92,7 @@ class OdontogramaListViewController: UITableViewController {
                     }
                     
                 }
-                
+                self.odontogramas = self.odontogramas.sorted(by: { $0.nomeAnimal < $1.nomeAnimal })
                 self.tableView.reloadData()
             }
         })
@@ -112,10 +112,6 @@ class OdontogramaListViewController: UITableViewController {
                     self.usuario.dataCadastro = NSDate(timeIntervalSince1970: dataCadastroTimestamp["timestamp"]!/1000)
                 })
             }
-            //self.usuario = Usuario(authData: user)
-            /*let currentUserRef = self.usersRef.child(self.user.uid)
-            currentUserRef.setValue(self.user.email)
-            currentUserRef.onDisconnectRemoveValue()*/
         }
     }
     
@@ -132,6 +128,10 @@ class OdontogramaListViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    @IBAction func didTapAdd(_ sender: Any) {
+        performSegue(withIdentifier: "segueToAdd", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -157,8 +157,9 @@ class OdontogramaListViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueToAdd") {
-            let editView: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
-            editView.tituloView = "Novo Odontograma"
+            let detailViewController: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
+            detailViewController.tituloView = "Novo Odontograma"
+            detailViewController.usuario = usuario!
         }
         if (segue.identifier == "segueToEdit") {
             let detailViewController = segue.destination as! OdontogramaDetailViewController
@@ -175,6 +176,7 @@ class OdontogramaListViewController: UITableViewController {
             detailViewController.sexoAnimal = sexoAnimal!
             detailViewController.dataCriacao = dataCriacao!
             detailViewController.dataUltimaAlteracao = dataUltimaAlteracao!
+            detailViewController.usuario = usuario!
         }
     }
 
