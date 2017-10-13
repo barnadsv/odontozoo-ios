@@ -212,15 +212,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="8qB-xm-SzZ" kind="show" identifier="segueToEdit" id="6zH-lm-q1v"/>
-                        <segue destination="8qB-xm-SzZ" kind="show" identifier="segueToAdd" id="SUL-ni-QUy"/>
+                        <segue destination="hsz-wY-O1u" kind="show" identifier="segueToEdit" id="6zH-lm-q1v"/>
+                        <segue destination="hsz-wY-O1u" kind="show" identifier="segueToAdd" id="SUL-ni-QUy"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJZ-vi-mbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1736.8" y="124.58770614692655"/>
         </scene>
-        <!--Odontograma Detail View Controller-->
+        <!--Cadastro-->
         <scene sceneID="TP5-AZ-Cic">
             <objects>
                 <viewController id="8qB-xm-SzZ" customClass="OdontogramaDetailViewController" customModule="odontozoo_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -331,7 +331,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAA-Mi-pKO">
-                                <rect key="frame" x="26" y="627" width="323" height="30"/>
+                                <rect key="frame" x="26" y="578" width="323" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -419,6 +419,7 @@
                             <constraint firstItem="K6V-VY-UKQ" firstAttribute="top" secondItem="OX8-05-lrI" secondAttribute="bottom" id="zAl-KI-Skb"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cadastro" image="edit_29x29.png" selectedImage="edit_29x29.png" id="H7a-As-mZT"/>
                     <connections>
                         <outlet property="lblDataCriacao" destination="lbY-jY-ZBK" id="IzO-hw-v96"/>
                         <outlet property="lblDataUltimaAlteracao" destination="7Ce-Yt-0wo" id="tBN-66-b77"/>
@@ -434,7 +435,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQ3-gX-lAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2648.8000000000002" y="124.58770614692655"/>
+            <point key="canvasLocation" x="3578" y="-113"/>
+        </scene>
+        <!--Fotos-->
+        <scene sceneID="HBL-vI-ote">
+            <objects>
+                <viewController id="CjB-OL-N1q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Up0-Ta-ozY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ypU-EB-srQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8nW-TY-b87">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fotos" image="photo_gallery_29x29.png" selectedImage="photo_gallery_29x29.png" id="21W-za-LIW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9e-1B-UMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3577" y="551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dO1-tX-4Te">
@@ -454,7 +474,29 @@
             </objects>
             <point key="canvasLocation" x="962" y="125"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9dl-ju-pMY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hsz-wY-O1u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9wm-PI-KRq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8qB-xm-SzZ" kind="relationship" relationship="viewControllers" id="XE5-e9-A7Z"/>
+                        <segue destination="CjB-OL-N1q" kind="relationship" relationship="viewControllers" id="FPW-OB-vKh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zNv-Ie-OLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2648.8000000000002" y="124.58770614692655"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="edit_29x29.png" width="16" height="16"/>
+        <image name="photo_gallery_29x29.png" width="29" height="29"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SUL-ni-QUy"/>
         <segue reference="JS8-4I-uUS"/>

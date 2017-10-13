@@ -155,67 +155,72 @@ class OdontogramaListViewController: UITableViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "segueToAdd") {
-            let detailViewController: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
-            detailViewController.tituloView = "Novo Odontograma"
-            detailViewController.usuario = usuario!
-        }
-        if (segue.identifier == "segueToEdit") {
-            let detailViewController = segue.destination as! OdontogramaDetailViewController
-            detailViewController.tituloView = "Detalhes do Odontograma"
-            detailViewController.id = id!
-            detailViewController.nomeAnimal = nomeAnimal!
-            detailViewController.emailUsuario = emailUsuario!
-            detailViewController.nomeUsuario = nomeUsuario!
-            detailViewController.nomeProprietario = nomeProprietario!
-            detailViewController.nomeAnimal = nomeAnimal!
-            detailViewController.familiaAnimal = familiaAnimal!
-            detailViewController.racaAnimal = racaAnimal!
-            detailViewController.idadeAnimal = idadeAnimal!
-            detailViewController.sexoAnimal = sexoAnimal!
-            detailViewController.dataCriacao = dataCriacao!
-            detailViewController.dataUltimaAlteracao = dataUltimaAlteracao!
-            detailViewController.usuario = usuario!
-        }
-    }
-
-    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if (segue.identifier == "segueToAdd") {
-//            let editView: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
-//            editView.tituloView = "Novo Odontograma"
+//            let detailViewController: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
+//            detailViewController.tituloView = "Novo Odontograma"
+//            detailViewController.usuario = usuario!
 //        }
 //        if (segue.identifier == "segueToEdit") {
-//            /*let tabBarC: UITabBarController = segue.destination as! UITabBarController
-//            let editView: OdontogramaDetailViewController = tabBarC.viewControllers?.first as! OdontogramaDetailViewController*/
-//            let editView: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
-//            editView.tituloView = "Detalhes do Odontograma"
-//            editView.emailUsuario = emailUsuario!
-//            editView.nomeUsuario = nomeUsuario!
-//            editView.nomeProprietario = nomeProprietario!
-//            editView.nomeAnimal = self.nomeAnimal!
-//            editView.familiaAnimal = familiaAnimal!
-//            editView.racaAnimal = racaAnimal!
-//            editView.idadeAnimal = idadeAnimal!
-//            editView.sexoAnimal = sexoAnimal!
-//            editView.dataCriacao = dataCriacao!
-//            editView.dataUltimaAlteracao = dataUltimaAlteracao!
-//            
-//            /*let odontogramaTabBarController = segue.destination as! OdontogramaTabBarController
-//            odontogramaTabBarController.id = id!
-//            odontogramaTabBarController.emailUsuario = emailUsuario!
-//            odontogramaTabBarController.nomeUsuario = nomeUsuario!
-//            odontogramaTabBarController.nomeProprietario = nomeProprietario!
-//            odontogramaTabBarController.nomeAnimal = nomeAnimal!
-//            odontogramaTabBarController.familiaAnimal = familiaAnimal!
-//            odontogramaTabBarController.racaAnimal = racaAnimal!
-//            odontogramaTabBarController.idadeAnimal = idadeAnimal!
-//            odontogramaTabBarController.sexoAnimal = sexoAnimal!
-//            odontogramaTabBarController.dataCriacao = dataCriacao!
-//            odontogramaTabBarController.dataUltimaAlteracao = dataUltimaAlteracao!*/
+//            let detailViewController = segue.destination as! OdontogramaDetailViewController
+//            detailViewController.tituloView = "Detalhes do Odontograma"
+//            detailViewController.id = id!
+//            detailViewController.nomeAnimal = nomeAnimal!
+//            detailViewController.emailUsuario = emailUsuario!
+//            detailViewController.nomeUsuario = nomeUsuario!
+//            detailViewController.nomeProprietario = nomeProprietario!
+//            detailViewController.nomeAnimal = nomeAnimal!
+//            detailViewController.familiaAnimal = familiaAnimal!
+//            detailViewController.racaAnimal = racaAnimal!
+//            detailViewController.idadeAnimal = idadeAnimal!
+//            detailViewController.sexoAnimal = sexoAnimal!
+//            detailViewController.dataCriacao = dataCriacao!
+//            detailViewController.dataUltimaAlteracao = dataUltimaAlteracao!
+//            detailViewController.usuario = usuario!
 //        }
 //    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueToAdd") {
+            let tabBarC: UITabBarController = segue.destination as! UITabBarController
+            let editView: OdontogramaDetailViewController = tabBarC.viewControllers?.first as! OdontogramaDetailViewController
+//            let editView: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
+            editView.tituloView = "Novo Odontograma"
+            editView.usuario = usuario!
+        }
+        if (segue.identifier == "segueToEdit") {
+            let tabBarC: UITabBarController = segue.destination as! UITabBarController
+            let editView: OdontogramaDetailViewController = tabBarC.viewControllers?.first as! OdontogramaDetailViewController
+//            let editView: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
+            editView.tituloView = "Detalhes do Odontograma"
+            editView.id = id!
+            editView.emailUsuario = emailUsuario!
+            editView.nomeUsuario = nomeUsuario!
+            editView.nomeProprietario = nomeProprietario!
+            editView.nomeAnimal = nomeAnimal!
+            editView.familiaAnimal = familiaAnimal!
+            editView.racaAnimal = racaAnimal!
+            editView.idadeAnimal = idadeAnimal!
+            editView.sexoAnimal = sexoAnimal!
+            editView.dataCriacao = dataCriacao!
+            editView.dataUltimaAlteracao = dataUltimaAlteracao!
+            editView.usuario = usuario!
+            
+            /*let odontogramaTabBarController = segue.destination as! OdontogramaTabBarController
+            odontogramaTabBarController.id = id!
+            odontogramaTabBarController.emailUsuario = emailUsuario!
+            odontogramaTabBarController.nomeUsuario = nomeUsuario!
+            odontogramaTabBarController.nomeProprietario = nomeProprietario!
+            odontogramaTabBarController.nomeAnimal = nomeAnimal!
+            odontogramaTabBarController.familiaAnimal = familiaAnimal!
+            odontogramaTabBarController.racaAnimal = racaAnimal!
+            odontogramaTabBarController.idadeAnimal = idadeAnimal!
+            odontogramaTabBarController.sexoAnimal = sexoAnimal!
+            odontogramaTabBarController.dataCriacao = dataCriacao!
+            odontogramaTabBarController.dataUltimaAlteracao = dataUltimaAlteracao!*/
+        }
+    }
 
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -31,6 +31,8 @@
 		A7AA703A1F8474A800835DF2 /* OdontogramaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70391F8474A800835DF2 /* OdontogramaListViewController.swift */; };
 		A7AA703C1F86AA2D00835DF2 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA703B1F86AA2D00835DF2 /* ImageTableViewCell.swift */; };
 		A7AA70401F89ABE500835DF2 /* OdontogramaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA703F1F89ABE500835DF2 /* OdontogramaDetailViewController.swift */; };
+		A7B2F2FC1F9066F300098E69 /* photo_gallery_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F2FB1F9066F300098E69 /* photo_gallery_29x29.png */; };
+		A7B2F2FE1F9067B300098E69 /* edit_29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B2F2FD1F9067B300098E69 /* edit_29x29.png */; };
 		A7BC2A161F7F00D6006FF242 /* Imagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A151F7F00D6006FF242 /* Imagem.swift */; };
 		A7BC2A191F7F023E006FF242 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A181F7F023E006FF242 /* Usuario.swift */; };
 		A7BC2A1B1F7F086B006FF242 /* Odontograma.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */; };
@@ -92,6 +94,8 @@
 		A7AA70391F8474A800835DF2 /* OdontogramaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaListViewController.swift; sourceTree = "<group>"; };
 		A7AA703B1F86AA2D00835DF2 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		A7AA703F1F89ABE500835DF2 /* OdontogramaDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaDetailViewController.swift; sourceTree = "<group>"; };
+		A7B2F2FB1F9066F300098E69 /* photo_gallery_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photo_gallery_29x29.png; path = "odontozoo-ios/photo_gallery_29x29.png"; sourceTree = "<group>"; };
+		A7B2F2FD1F9067B300098E69 /* edit_29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit_29x29.png; path = "odontozoo-ios/edit_29x29.png"; sourceTree = "<group>"; };
 		A7BC2A151F7F00D6006FF242 /* Imagem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagem.swift; sourceTree = "<group>"; };
 		A7BC2A181F7F023E006FF242 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		A7BC2A1A1F7F086B006FF242 /* Odontograma.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Odontograma.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		A73767C71F79615400AE7A38 = {
 			isa = PBXGroup;
 			children = (
+				A7B2F2FD1F9067B300098E69 /* edit_29x29.png */,
+				A7B2F2FB1F9066F300098E69 /* photo_gallery_29x29.png */,
 				A76C02F01F8ADFE9008F113B /* iTunesArtwork@1x.png */,
 				A76C02F11F8ADFE9008F113B /* iTunesArtwork@2x.png */,
 				A76C02F21F8ADFE9008F113B /* iTunesArtwork@3x.png */,
@@ -359,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B2F2FC1F9066F300098E69 /* photo_gallery_29x29.png in Resources */,
 				A73767E11F79615500AE7A38 /* LaunchScreen.storyboard in Resources */,
 				A76C02F41F8ADFE9008F113B /* iTunesArtwork@1x.png in Resources */,
 				A76C02F71F8ADFE9008F113B /* AppIcon.appiconset in Resources */,
@@ -366,6 +373,7 @@
 				A73768051F7A113E00AE7A38 /* GoogleService-Info.plist in Resources */,
 				A76C02F61F8ADFE9008F113B /* iTunesArtwork@3x.png in Resources */,
 				A73767DE1F79615500AE7A38 /* Assets.xcassets in Resources */,
+				A7B2F2FE1F9067B300098E69 /* edit_29x29.png in Resources */,
 				A73767D91F79615500AE7A38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
