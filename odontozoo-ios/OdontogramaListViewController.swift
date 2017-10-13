@@ -46,10 +46,13 @@ class OdontogramaListViewController: UITableViewController {
                 
                 self.odontogramas.removeAll()
                 
+                // usuarios
                 for itens in snapshot.children.allObjects as! [DataSnapshot] {
                     
+                    // odontogramas
                     let itemList = itens.value as? [String: AnyObject]
                     
+                    // odontogramas
                     for item in itemList! {
                     
                         //let key = item.key

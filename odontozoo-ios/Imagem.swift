@@ -12,7 +12,7 @@ public struct Imagem {
     
     public var id: String
     public var storageId: String
-    public var strUri: String
+    public var strUri: String?
     
     init(id: String, storageId: String, strUri: String) {
         self.id = id
