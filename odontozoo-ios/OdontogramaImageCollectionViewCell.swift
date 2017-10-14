@@ -7,8 +7,9 @@
 //
 
 import UIKit
+//import Firebase
 
-class ImageCollectionViewCell: UICollectionViewCell {
+class OdontogramaImageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     

@@ -452,7 +452,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="OdontogramaImageCell" id="gW8-Pm-IlX" customClass="ImageCollectionViewCell" customModule="odontozoo_ios" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OdontogramaImageCell" id="gW8-Pm-IlX" userLabel="Odontograma Image Collection View Cell" customClass="OdontogramaImageCollectionViewCell" customModule="odontozoo_ios" customModuleProvider="target">
                                 <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -460,15 +460,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZoV-aM-ODk">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="2" y="2" width="196" height="196"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ZoV-aM-ODk" secondAttribute="bottom" id="RiY-gC-uaK"/>
-                                    <constraint firstItem="ZoV-aM-ODk" firstAttribute="leading" secondItem="gW8-Pm-IlX" secondAttribute="leading" id="S1b-F1-Tp6"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZoV-aM-ODk" secondAttribute="trailing" id="eeY-hC-yby"/>
-                                    <constraint firstItem="ZoV-aM-ODk" firstAttribute="top" secondItem="gW8-Pm-IlX" secondAttribute="top" id="hRS-gh-aka"/>
+                                    <constraint firstItem="ZoV-aM-ODk" firstAttribute="top" secondItem="gW8-Pm-IlX" secondAttribute="top" constant="2" id="AOz-Yh-Keg"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZoV-aM-ODk" secondAttribute="trailing" constant="2" id="Wuy-jp-KJM"/>
+                                    <constraint firstItem="ZoV-aM-ODk" firstAttribute="leading" secondItem="gW8-Pm-IlX" secondAttribute="leading" constant="2" id="gVo-Og-SEU"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZoV-aM-ODk" secondAttribute="bottom" constant="2" id="isV-Lv-o3J"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="ZoV-aM-ODk" id="45U-3m-fLz"/>
@@ -484,26 +484,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhU-tC-3MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3566" y="628"/>
-        </scene>
-        <!--Imagens-->
-        <scene sceneID="HBL-vI-ote">
-            <objects>
-                <viewController id="CjB-OL-N1q" customClass="OdontogramaImagesViewController" customModule="odontozoo_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Up0-Ta-ozY"/>
-                        <viewControllerLayoutGuide type="bottom" id="ypU-EB-srQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8nW-TY-b87">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Imagens" image="photo_gallery_29x29.png" selectedImage="photo_gallery_29x29.png" id="21W-za-LIW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d9e-1B-UMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4337" y="582"/>
+            <point key="canvasLocation" x="3615" y="629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dO1-tX-4Te">
