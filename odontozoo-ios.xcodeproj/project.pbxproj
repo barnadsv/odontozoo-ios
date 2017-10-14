@@ -18,6 +18,7 @@
 		A73768051F7A113E00AE7A38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */; };
 		A75521CC1F912E0500B22C1E /* OdontogramaImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75521CB1F912E0500B22C1E /* OdontogramaImageCollectionViewCell.swift */; };
 		A75521CE1F91DF9E00B22C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75521CD1F91DF9E00B22C1E /* Assets.xcassets */; };
+		A75521D01F92448400B22C1E /* OdontogramaImagesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75521CF1F92448400B22C1E /* OdontogramaImagesHeaderView.swift */; };
 		A76C02E71F8AC31F008F113B /* OdontogramaSvgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76C02E61F8AC31F008F113B /* OdontogramaSvgViewController.swift */; };
 		A76C02E91F8AC5F7008F113B /* OdontogramaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76C02E81F8AC5F7008F113B /* OdontogramaTabBarController.swift */; };
 		A76C02F41F8ADFE9008F113B /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = A76C02F01F8ADFE9008F113B /* iTunesArtwork@1x.png */; };
@@ -80,6 +81,7 @@
 		A73768041F7A113E00AE7A38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A75521CB1F912E0500B22C1E /* OdontogramaImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A75521CD1F91DF9E00B22C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A75521CF1F92448400B22C1E /* OdontogramaImagesHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaImagesHeaderView.swift; sourceTree = "<group>"; };
 		A76C02E61F8AC31F008F113B /* OdontogramaSvgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaSvgViewController.swift; sourceTree = "<group>"; };
 		A76C02E81F8AC5F7008F113B /* OdontogramaTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaTabBarController.swift; sourceTree = "<group>"; };
 		A76C02F01F8ADFE9008F113B /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@1x.png"; path = "odontozoo-ios/Assets.xcassets/iTunesArtwork@1x.png"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				A76C02E81F8AC5F7008F113B /* OdontogramaTabBarController.swift */,
 				A7B2F2FF1F906E2A00098E69 /* OdontogramaImagesViewController.swift */,
 				A75521CB1F912E0500B22C1E /* OdontogramaImageCollectionViewCell.swift */,
+				A75521CF1F92448400B22C1E /* OdontogramaImagesHeaderView.swift */,
 			);
 			path = "odontozoo-ios";
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75521D01F92448400B22C1E /* OdontogramaImagesHeaderView.swift in Sources */,
 				A73767DC1F79615500AE7A38 /* odontozoo_ios.xcdatamodeld in Sources */,
 				A7AA702F1F80543D00835DF2 /* RegisterViewController.swift in Sources */,
 				A75521CC1F912E0500B22C1E /* OdontogramaImageCollectionViewCell.swift in Sources */,
