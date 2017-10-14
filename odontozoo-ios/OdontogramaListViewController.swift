@@ -210,18 +210,6 @@ class OdontogramaListViewController: UITableViewController {
             editView.dataUltimaAlteracao = dataUltimaAlteracao!
             editView.usuario = usuario!
             
-            /*let odontogramaTabBarController = segue.destination as! OdontogramaTabBarController
-            odontogramaTabBarController.id = id!
-            odontogramaTabBarController.emailUsuario = emailUsuario!
-            odontogramaTabBarController.nomeUsuario = nomeUsuario!
-            odontogramaTabBarController.nomeProprietario = nomeProprietario!
-            odontogramaTabBarController.nomeAnimal = nomeAnimal!
-            odontogramaTabBarController.familiaAnimal = familiaAnimal!
-            odontogramaTabBarController.racaAnimal = racaAnimal!
-            odontogramaTabBarController.idadeAnimal = idadeAnimal!
-            odontogramaTabBarController.sexoAnimal = sexoAnimal!
-            odontogramaTabBarController.dataCriacao = dataCriacao!
-            odontogramaTabBarController.dataUltimaAlteracao = dataUltimaAlteracao!*/
         }
     }
 

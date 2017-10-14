@@ -14,7 +14,8 @@ import SDWebImage
 class OdontogramaImagesViewController: UICollectionViewController {
 
     var imagens: [Imagem] = []
-    fileprivate let sectionInsets = UIEdgeInsets(top: 25.0, left: 25.0, bottom: 25.0, right: 25.0)
+    var selectedIndexPath: IndexPath = [0, 0]
+    fileprivate let sectionInsets = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
     let reuseIdentifier = "OdontogramaImageCell"
     fileprivate let imagem: Imagem! = nil
     fileprivate let itemsPerRow: CGFloat = 2
@@ -23,9 +24,28 @@ class OdontogramaImagesViewController: UICollectionViewController {
     var odontogramaId: String! = ""
     var imageWidth: CGFloat! = 200.0
     
+//    @IBAction func didTapCameraButton(_ sender: Any) {
+//        performSegue(withIdentifier: "segueToCamera", sender: nil)
+//    }
+    
+    // Quando a view começa a ser carregada
+    override func loadView() {
+        
+        super.loadView()
+        let detailTabController = self.tabBarController?.viewControllers?.first as! OdontogramaDetailViewController
+        self.usuario = detailTabController.usuario
+        self.odontogramaId = detailTabController.id
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionHeadersPinToVisibleBounds = true
+        flowLayout.headerReferenceSize = CGSize(width: (self.collectionView?.frame.size.width)!, height: 50)
+        
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -61,18 +81,45 @@ class OdontogramaImagesViewController: UICollectionViewController {
 
     }
     
-    // Quando a view começa a ser carregada
-    override func loadView() {
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        //        //myViewController.title = "My App"
+        //        let nav = UINavigationController(rootViewController: self)
+        //        nav.navigationBar.barTintColor = UIColor.red
+        //        nav.navigationBar.tintColor = UIColor.white
+        ////        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addStuff))
+        //        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        //        add.tintColor = UIColor.white
+        //        self.navigationItem.rightBarButtonItem = add
         
-        super.loadView()
-        let detailTabController = self.tabBarController?.viewControllers?.first as! OdontogramaDetailViewController
-        self.usuario = detailTabController.usuario
-        self.odontogramaId = detailTabController.id
+        // self.title = "Imagens do Odontograma"
         
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionHeadersPinToVisibleBounds = true
-        flowLayout.headerReferenceSize = CGSize(width: (self.collectionView?.frame.size.width)!, height: 50)
+//        let navigationController = UINavigationController(rootViewController: self);
+//        let navigationBar = navigationController.navigationBar
+//        navigationBar.tintColor = UIColor.black
+        //        let navigationItem = navigationBar.items?[0] as UINavigationItem
+        //
+        //        let cameraButton = navigationItem. ?[1] as UIBarButtonItem
+        //
+        //        self.navigationItem.title = "Imagens do Odontograma"
+        //        navigationItem?.title = "Imagens do Odontograma"
+        //        let navigationItem = UINavigationItem()
+        //        navigationItem.title = "Imagens do Odontograma"
+        //
+        //        let rightButton = UIBarButtonItem(title: "Camera", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        //
+        //        navigationItem.rightBarButtonItem = rightButton
+        //
+        //        navigationBar.items = [navigationItem]
         
+        
+        
+        
+    }
+    
+    
+    func positionForBar(bar: UIBarPositioning) -> UIBarPosition {
+        return UIBarPosition.topAttached
     }
     
     override func didReceiveMemoryWarning() {
@@ -111,6 +158,23 @@ extension OdontogramaImagesViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        self.selectedIndexPath = indexPath
+        performSegue(withIdentifier: "segueToImage", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueToImage") {
+            let selectedCell = collectionView?.cellForItem(at: selectedIndexPath) as! OdontogramaImageCollectionViewCell
+            let imageViewController: OdontogramaImageViewController = segue.destination as! OdontogramaImageViewController
+            imageViewController.odontogramaImage = selectedCell.imageView.image
+            
+        }
+        
+    }
+
+    
     override func collectionView(_ collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
@@ -146,7 +210,7 @@ extension OdontogramaImagesViewController : UICollectionViewDelegateFlowLayout {
         let widthPerItem = availableWidth / itemsPerRow
         self.imageWidth = widthPerItem
         
-        return CGSize(width: widthPerItem, height: 1.5*widthPerItem)
+        return CGSize(width: widthPerItem, height: 1.33*widthPerItem)
     }
     
     //3
@@ -168,15 +232,15 @@ extension OdontogramaImagesViewController : UICollectionViewDelegateFlowLayout {
                         referenceSizeForHeaderInSection section: Int) -> CGSize {
         switch UIDevice.current.orientation{
             case .portrait:
-                return CGSize(width: UIScreen.main.bounds.width, height: 100)
+                return CGSize(width: UIScreen.main.bounds.width, height: 110)
             case .portraitUpsideDown:
-                return CGSize(width: UIScreen.main.bounds.width, height: 100)
+                return CGSize(width: UIScreen.main.bounds.width, height: 110)
             case .landscapeLeft:
-                return CGSize(width: UIScreen.main.bounds.width, height: 75)
+                return CGSize(width: UIScreen.main.bounds.width, height: 80)
             case .landscapeRight:
-                return CGSize(width: UIScreen.main.bounds.width, height: 75)
+                return CGSize(width: UIScreen.main.bounds.width, height: 80)
             default:
-                return CGSize(width: UIScreen.main.bounds.width, height: 100)
+                return CGSize(width: UIScreen.main.bounds.width, height: 110)
         }
         
     }
