@@ -159,6 +159,17 @@ class OdontogramaDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblTitulo.text = tituloView
+        
+        let borderColor = UIColor(hex: "FFC107")
+        
+        txtNomeAnimal.layer.borderWidth = 1.0
+        txtNomeAnimal.layer.borderColor = borderColor.cgColor
+        txtRacaAnimal.layer.borderWidth = 1.0
+        txtRacaAnimal.layer.borderColor = borderColor.cgColor
+        txtNomeProprietario.layer.borderWidth = 1.0
+        txtNomeProprietario.layer.borderColor = borderColor.cgColor
+        
+        
         txtNomeAnimal.text  = nomeAnimal
         switch familiaAnimal {
             case "Canina":
@@ -205,4 +216,27 @@ class OdontogramaDetailViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    
 }
+
+extension UIColor {
+    convenience init(hex: String) {
+        let scanner = Scanner(string: hex)
+        scanner.scanLocation = 0
+        
+        var rgbValue: UInt64 = 0
+        
+        scanner.scanHexInt64(&rgbValue)
+        
+        let r = (rgbValue & 0xff0000) >> 16
+        let g = (rgbValue & 0xff00) >> 8
+        let b = rgbValue & 0xff
+        
+        self.init(
+            red: CGFloat(r) / 0xff,
+            green: CGFloat(g) / 0xff,
+            blue: CGFloat(b) / 0xff, alpha: 1
+        )
+    }
+}
+
