@@ -13,5 +13,4 @@ class OdontogramaImageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    
 }

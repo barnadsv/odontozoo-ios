@@ -11,6 +11,8 @@ import Firebase
 
 var gUsuario: Usuario!
 var gOdontogramaId: String!
+var gImageId: String!
+var gImageStorageId: String!
 
 class OdontogramaListViewController: UITableViewController {
     
@@ -190,7 +192,8 @@ class OdontogramaListViewController: UITableViewController {
             
             gUsuario = usuario!
             gOdontogramaId = id!
-            
+            gImageId = nil
+            gImageStorageId = nil
         }
     }
 

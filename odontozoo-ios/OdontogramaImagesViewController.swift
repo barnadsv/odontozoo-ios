@@ -20,8 +20,8 @@ class OdontogramaImagesViewController: UICollectionViewController {
     fileprivate let imagem: Imagem! = nil
     fileprivate let itemsPerRow: CGFloat = 2
     let imagesRef = Database.database().reference(withPath: "odontogramaImagesList/")
-    var usuario: Usuario!
-    var odontogramaId: String! = ""
+    //var usuario: Usuario!
+    //var odontogramaId: String! = ""
     var imageWidth: CGFloat! = 200.0
     
 //    @IBAction func didTapCameraButton(_ sender: Any) {
@@ -32,9 +32,10 @@ class OdontogramaImagesViewController: UICollectionViewController {
     override func loadView() {
         
         super.loadView()
-        let detailTabController = self.tabBarController?.viewControllers?.first as! OdontogramaDetailViewController
-        self.usuario = detailTabController.usuario
-        self.odontogramaId = detailTabController.id
+        
+        //let detailTabController = self.tabBarController?.viewControllers?.first as! OdontogramaDetailViewController
+        //self.usuario = detailTabController.usuario
+        //self.odontogramaId = detailTabController.id
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.sectionHeadersPinToVisibleBounds = true
@@ -46,6 +47,8 @@ class OdontogramaImagesViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        gImageId = nil
+        gImageStorageId = nil
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,7 +56,7 @@ class OdontogramaImagesViewController: UICollectionViewController {
         //collectionView!.register(OdontogramaImageCollectionViewCell.self, forCellWithReuseIdentifier: self.reuseIdentifier)
         
         // imagens
-        imagesRef.child(odontogramaId).observe(DataEventType.value, with: { (snapshot) in
+        imagesRef.child(gOdontogramaId).observe(DataEventType.value, with: { (snapshot) in
 
             if snapshot.childrenCount > 0 {
                 
@@ -170,6 +173,8 @@ extension OdontogramaImagesViewController {
             let cameraViewController: OdontogramaCameraViewController = segue.destination as! OdontogramaCameraViewController
             cameraViewController.odontogramaImage = selectedCell.imageView.image
             cameraViewController.ehCamera = false
+            gImageId = imagens[selectedIndexPath.row].id
+            gImageStorageId = imagens[selectedIndexPath.row].storageId
         }
         
     }
