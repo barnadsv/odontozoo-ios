@@ -447,13 +447,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uky-vn-5qP">
                             <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="50" height="80"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OdontogramaImageCell" id="gW8-Pm-IlX" userLabel="Odontograma Image Collection View Cell" customClass="OdontogramaImageCollectionViewCell" customModule="odontozoo_ios" customModuleProvider="target">
-                                <rect key="frame" x="60" y="50" width="200" height="200"/>
+                                <rect key="frame" x="60" y="80" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -476,24 +476,27 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" restorationIdentifier="OdontogramaImagesHeaderView" reuseIdentifier="OdontogramaImagesHeaderView" id="o6c-Lf-WHM" customClass="OdontogramaImagesHeaderView" customModule="odontozoo_ios" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagens do Odontograma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4o-dD-iEa">
-                                    <rect key="frame" x="10" y="10" width="300" height="40"/>
+                                    <rect key="frame" x="0.0" y="60" width="320" height="20"/>
+                                    <color key="backgroundColor" red="0.37647058820000001" green="0.4823529412" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="Gv2-q9-Q2N"/>
+                                        <constraint firstAttribute="height" constant="20" id="nyM-9X-efB"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="K4o-dD-iEa" firstAttribute="leading" secondItem="o6c-Lf-WHM" secondAttribute="leading" constant="10" id="eQc-QZ-vuu"/>
-                                <constraint firstAttribute="trailing" secondItem="K4o-dD-iEa" secondAttribute="trailing" constant="10" id="fkY-yh-T6N"/>
-                                <constraint firstAttribute="bottom" secondItem="K4o-dD-iEa" secondAttribute="bottom" id="sk3-yt-Mo5"/>
+                                <constraint firstItem="K4o-dD-iEa" firstAttribute="top" secondItem="o6c-Lf-WHM" secondAttribute="top" constant="60" id="1Ep-iW-Ecq"/>
+                                <constraint firstAttribute="trailing" secondItem="K4o-dD-iEa" secondAttribute="trailing" id="fd9-mq-yrn"/>
+                                <constraint firstItem="K4o-dD-iEa" firstAttribute="leading" secondItem="o6c-Lf-WHM" secondAttribute="leading" id="q2E-rr-QKp"/>
                             </constraints>
                             <connections>
                                 <outlet property="lblTitulo" destination="K4o-dD-iEa" id="riY-nw-v6J"/>
@@ -526,7 +529,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X3v-NP-CjA">
-                                <rect key="frame" x="0.0" y="60" width="320" height="376"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="347"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-wa-glW">
                                 <rect key="frame" x="0.0" y="436" width="320" height="44"/>
@@ -538,14 +541,14 @@
                                         </constraints>
                                         <items>
                                             <barButtonItem image="trash" id="4fM-pb-olu" userLabel="Apagar">
-                                                <color key="tintColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="didTapRemove:" destination="0ux-nR-DTS" id="skp-cZ-F0Z"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="2cQ-wG-9zE"/>
                                             <barButtonItem image="ok" style="plain" id="h6U-m3-tbj" userLabel="Salvar">
-                                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="didTapSave:" destination="0ux-nR-DTS" id="KDw-16-jXR"/>
                                                 </connections>
@@ -560,34 +563,35 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-eh-yNQ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imagem do Odontograma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxr-X7-Lto">
-                                        <rect key="frame" x="10" y="10" width="300" height="20"/>
+                                        <rect key="frame" x="8" y="0.0" width="300" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.70535415008944924" green="0.8317666970209604" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.37647058820000001" green="0.4823529412" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="qSU-8v-sA8"/>
+                                    <constraint firstAttribute="height" constant="20" id="1ur-On-6KQ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="X3v-NP-CjA" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="0g8-k2-tMG"/>
+                            <constraint firstAttribute="trailing" secondItem="UX9-eh-yNQ" secondAttribute="trailing" id="7fh-0z-ttU"/>
                             <constraint firstAttribute="trailing" secondItem="gA7-wa-glW" secondAttribute="trailing" id="81h-MG-7Cr"/>
                             <constraint firstItem="gA7-wa-glW" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="9ez-ct-ZSl"/>
-                            <constraint firstItem="gA7-wa-glW" firstAttribute="top" secondItem="X3v-NP-CjA" secondAttribute="bottom" id="AuD-39-6lk"/>
-                            <constraint firstItem="X3v-NP-CjA" firstAttribute="top" secondItem="UX9-eh-yNQ" secondAttribute="bottom" id="BDV-Iu-wA5"/>
-                            <constraint firstAttribute="trailing" secondItem="X3v-NP-CjA" secondAttribute="trailing" id="IgS-A8-PfB"/>
-                            <constraint firstAttribute="trailing" secondItem="UX9-eh-yNQ" secondAttribute="trailing" id="Lzi-xb-It8"/>
-                            <constraint firstItem="UX9-eh-yNQ" firstAttribute="top" secondItem="Rri-WM-YDb" secondAttribute="bottom" id="fDQ-Lg-rar"/>
+                            <constraint firstItem="X3v-NP-CjA" firstAttribute="top" secondItem="UX9-eh-yNQ" secondAttribute="bottom" id="AXB-If-5ib"/>
+                            <constraint firstAttribute="trailing" secondItem="X3v-NP-CjA" secondAttribute="trailing" id="MnP-j8-rG1"/>
+                            <constraint firstItem="UX9-eh-yNQ" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="ZlM-3t-eBD"/>
+                            <constraint firstItem="gA7-wa-glW" firstAttribute="top" secondItem="X3v-NP-CjA" secondAttribute="bottom" constant="49" id="kLS-uD-ILh"/>
                             <constraint firstItem="pJw-VK-G53" firstAttribute="top" secondItem="gA7-wa-glW" secondAttribute="bottom" id="luz-Xh-fLN"/>
-                            <constraint firstItem="UX9-eh-yNQ" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="m2Q-GD-xOR"/>
-                            <constraint firstItem="X3v-NP-CjA" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="ooK-ZJ-lY5"/>
+                            <constraint firstItem="UX9-eh-yNQ" firstAttribute="top" secondItem="Rri-WM-YDb" secondAttribute="bottom" id="zu1-dd-Ejr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Câmera" image="camera-icon" selectedImage="camera-icon" id="RZq-BF-Ulm"/>
@@ -608,6 +612,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cgk-sr-wfU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.37647058823529411" green="0.4823529411764706" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -627,6 +636,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="8qB-xm-SzZ" kind="relationship" relationship="viewControllers" id="XE5-e9-A7Z"/>
@@ -647,8 +658,8 @@
         <image name="trash" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JS8-4I-uUS"/>
         <segue reference="SUL-ni-QUy"/>
+        <segue reference="JS8-4I-uUS"/>
         <segue reference="aDt-Kp-rTV"/>
         <segue reference="Sgj-Bc-qNC"/>
     </inferredMetricsTieBreakers>

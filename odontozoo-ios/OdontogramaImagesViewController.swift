@@ -23,6 +23,7 @@ class OdontogramaImagesViewController: UICollectionViewController {
     //var usuario: Usuario!
     //var odontogramaId: String! = ""
     var imageWidth: CGFloat! = 200.0
+    var jaCarregou: Bool = false
     
 //    @IBAction func didTapCameraButton(_ sender: Any) {
 //        performSegue(withIdentifier: "segueToCamera", sender: nil)
@@ -37,9 +38,9 @@ class OdontogramaImagesViewController: UICollectionViewController {
         //self.usuario = detailTabController.usuario
         //self.odontogramaId = detailTabController.id
         
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionHeadersPinToVisibleBounds = true
-        flowLayout.headerReferenceSize = CGSize(width: (self.collectionView?.frame.size.width)!, height: 50)
+//        let flowLayout = UICollectionViewFlowLayout()
+//        flowLayout.sectionHeadersPinToVisibleBounds = true
+//        flowLayout.headerReferenceSize = CGSize(width: (self.collectionView?.frame.size.width)!, height: 20)
         
     }
 
@@ -81,7 +82,7 @@ class OdontogramaImagesViewController: UICollectionViewController {
                 }
             }
         })
-
+        jaCarregou = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,9 +116,45 @@ class OdontogramaImagesViewController: UICollectionViewController {
         //
         //        navigationBar.items = [navigationItem]
         
+        if (jaCarregou == false) {
+            gImageId = nil
+            gImageStorageId = nil
+            // Uncomment the following line to preserve selection between presentations
+            // self.clearsSelectionOnViewWillAppear = false
         
+            // Register cell classes
+            //collectionView!.register(OdontogramaImageCollectionViewCell.self, forCellWithReuseIdentifier: self.reuseIdentifier)
         
-        
+            // imagens
+            imagesRef.child(gOdontogramaId).observe(DataEventType.value, with: { (snapshot) in
+            
+                if snapshot.childrenCount > 0 {
+                
+                    self.imagens.removeAll()
+                
+                    // imagem
+                    for item in snapshot.children.allObjects as! [DataSnapshot] {
+                    
+                        guard let imagemObject = item.value as? [String: Any] else { continue }
+                        let id = imagemObject["id"] as? String
+                        let storageId  = imagemObject["storageId"] as? String
+                        let strUri = imagemObject["strUri"] as? String
+                    
+                        let imagem = Imagem(
+                            id: id!,
+                            storageId: storageId!,
+                            strUri: strUri!
+                        )
+                    
+                        self.imagens.append(imagem)
+                    
+                    }
+                }
+            })
+        } else {
+            jaCarregou = false
+        }
+        collectionView?.reloadData()
     }
     
     

@@ -43,6 +43,10 @@ class OdontogramaListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let nav = UINavigationController(rootViewController: self)
+//        nav.navigationBar.barTintColor = UIColor.red
+//        nav.navigationBar.tintColor = UIColor.white
+        
         tableView.allowsMultipleSelectionDuringEditing = false
         
         odontogramasRef.observe(DataEventType.value, with: { (snapshot) in
