@@ -506,8 +506,7 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Imagens" image="photo_gallery_29x29.png" selectedImage="photo_gallery_29x29.png" id="aVt-QW-AUQ"/>
                     <connections>
-                        <segue destination="1dY-zk-lqf" kind="show" identifier="segueToImage" id="1Jr-Ee-cTl"/>
-                        <segue destination="1dY-zk-lqf" kind="show" identifier="segueToCamera" id="h9y-16-5Zw"/>
+                        <segue destination="0ux-nR-DTS" kind="show" identifier="segueToImage" id="Sgj-Bc-qNC"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhU-tC-3MC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -526,16 +525,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X3v-NP-CjA">
-                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X3v-NP-CjA">
+                                <rect key="frame" x="0.0" y="104" width="320" height="283"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-wa-glW">
+                                <rect key="frame" x="0.0" y="387" width="320" height="44"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnA-3f-Gxu">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <items>
+                                            <barButtonItem image="cancel" id="4fM-pb-olu" userLabel="Apagar">
+                                                <color key="tintColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="didTapRemove:" destination="0ux-nR-DTS" id="skp-cZ-F0Z"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="2cQ-wG-9zE"/>
+                                            <barButtonItem image="ok" style="plain" id="h6U-m3-tbj" userLabel="Salvar">
+                                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="didTapSave:" destination="0ux-nR-DTS" id="KDw-16-jXR"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-eh-yNQ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imagem do Odontograma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxr-X7-Lto">
+                                        <rect key="frame" x="10" y="10" width="300" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70535415008944924" green="0.8317666970209604" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qSU-8v-sA8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="X3v-NP-CjA" secondAttribute="trailing" id="8KZ-mv-0j0"/>
-                            <constraint firstItem="pJw-VK-G53" firstAttribute="top" secondItem="X3v-NP-CjA" secondAttribute="bottom" id="Bcy-cr-ORY"/>
-                            <constraint firstItem="X3v-NP-CjA" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="CRA-md-Qwo"/>
-                            <constraint firstItem="X3v-NP-CjA" firstAttribute="top" secondItem="Rri-WM-YDb" secondAttribute="bottom" id="IaX-Qj-TNp"/>
+                            <constraint firstAttribute="trailing" secondItem="gA7-wa-glW" secondAttribute="trailing" id="81h-MG-7Cr"/>
+                            <constraint firstItem="gA7-wa-glW" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="9ez-ct-ZSl"/>
+                            <constraint firstItem="gA7-wa-glW" firstAttribute="top" secondItem="X3v-NP-CjA" secondAttribute="bottom" id="AuD-39-6lk"/>
+                            <constraint firstItem="X3v-NP-CjA" firstAttribute="top" secondItem="UX9-eh-yNQ" secondAttribute="bottom" id="BDV-Iu-wA5"/>
+                            <constraint firstAttribute="trailing" secondItem="X3v-NP-CjA" secondAttribute="trailing" id="IgS-A8-PfB"/>
+                            <constraint firstAttribute="trailing" secondItem="UX9-eh-yNQ" secondAttribute="trailing" id="Lzi-xb-It8"/>
+                            <constraint firstItem="UX9-eh-yNQ" firstAttribute="top" secondItem="Rri-WM-YDb" secondAttribute="bottom" id="fDQ-Lg-rar"/>
+                            <constraint firstItem="pJw-VK-G53" firstAttribute="top" secondItem="gA7-wa-glW" secondAttribute="bottom" id="luz-Xh-fLN"/>
+                            <constraint firstItem="UX9-eh-yNQ" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="m2Q-GD-xOR"/>
+                            <constraint firstItem="X3v-NP-CjA" firstAttribute="leading" secondItem="oLs-Dn-Dt4" secondAttribute="leading" id="ooK-ZJ-lY5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Câmera" image="camera-icon" selectedImage="camera-icon" id="RZq-BF-Ulm"/>
@@ -545,39 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTZ-rg-sLe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608" y="985"/>
-        </scene>
-        <!--Odontograma Image View Controller-->
-        <scene sceneID="bkb-LT-ISO">
-            <objects>
-                <viewController id="1dY-zk-lqf" userLabel="Odontograma Image View Controller" customClass="OdontogramaImageViewController" customModule="odontozoo_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="j2q-RU-ofL"/>
-                        <viewControllerLayoutGuide type="bottom" id="aO7-V6-MQK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ez7-hl-8Qu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPw-9y-YVc">
-                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aPw-9y-YVc" firstAttribute="leading" secondItem="ez7-hl-8Qu" secondAttribute="leading" id="Z01-n5-zrY"/>
-                            <constraint firstItem="aPw-9y-YVc" firstAttribute="top" secondItem="j2q-RU-ofL" secondAttribute="bottom" id="nCw-bv-CSd"/>
-                            <constraint firstAttribute="trailing" secondItem="aPw-9y-YVc" secondAttribute="trailing" id="r79-gQ-vsR"/>
-                            <constraint firstItem="aO7-V6-MQK" firstAttribute="top" secondItem="aPw-9y-YVc" secondAttribute="bottom" id="uzh-rF-Zhz"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="imageView" destination="aPw-9y-YVc" id="hIF-zm-Kfp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UV6-5f-wHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4631" y="124"/>
+            <point key="canvasLocation" x="3562.5" y="985"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dO1-tX-4Te">
@@ -620,12 +632,14 @@
     </scenes>
     <resources>
         <image name="camera-icon" width="30" height="30"/>
+        <image name="cancel" width="30" height="30"/>
         <image name="edit_29x29.png" width="29" height="29"/>
+        <image name="ok" width="30" height="30"/>
         <image name="photo_gallery_29x29.png" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="SUL-ni-QUy"/>
         <segue reference="JS8-4I-uUS"/>
-        <segue reference="6zH-lm-q1v"/>
-        <segue reference="h9y-16-5Zw"/>
+        <segue reference="Sgj-Bc-qNC"/>
     </inferredMetricsTieBreakers>
 </document>

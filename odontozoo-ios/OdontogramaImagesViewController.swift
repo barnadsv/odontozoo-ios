@@ -167,9 +167,9 @@ extension OdontogramaImagesViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueToImage") {
             let selectedCell = collectionView?.cellForItem(at: selectedIndexPath) as! OdontogramaImageCollectionViewCell
-            let imageViewController: OdontogramaImageViewController = segue.destination as! OdontogramaImageViewController
-            imageViewController.odontogramaImage = selectedCell.imageView.image
-            
+            let cameraViewController: OdontogramaCameraViewController = segue.destination as! OdontogramaCameraViewController
+            cameraViewController.odontogramaImage = selectedCell.imageView.image
+            cameraViewController.ehCamera = false
         }
         
     }

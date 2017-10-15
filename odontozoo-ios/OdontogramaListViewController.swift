@@ -9,6 +9,9 @@
 import UIKit
 import Firebase
 
+var gUsuario: Usuario!
+var gOdontogramaId: String!
+
 class OdontogramaListViewController: UITableViewController {
     
     var odontogramas: [Odontograma] = []
@@ -157,31 +160,6 @@ class OdontogramaListViewController: UITableViewController {
         performSegue(withIdentifier: "segueToEdit", sender: self)
         
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "segueToAdd") {
-//            let detailViewController: OdontogramaDetailViewController = segue.destination as! OdontogramaDetailViewController
-//            detailViewController.tituloView = "Novo Odontograma"
-//            detailViewController.usuario = usuario!
-//        }
-//        if (segue.identifier == "segueToEdit") {
-//            let detailViewController = segue.destination as! OdontogramaDetailViewController
-//            detailViewController.tituloView = "Detalhes do Odontograma"
-//            detailViewController.id = id!
-//            detailViewController.nomeAnimal = nomeAnimal!
-//            detailViewController.emailUsuario = emailUsuario!
-//            detailViewController.nomeUsuario = nomeUsuario!
-//            detailViewController.nomeProprietario = nomeProprietario!
-//            detailViewController.nomeAnimal = nomeAnimal!
-//            detailViewController.familiaAnimal = familiaAnimal!
-//            detailViewController.racaAnimal = racaAnimal!
-//            detailViewController.idadeAnimal = idadeAnimal!
-//            detailViewController.sexoAnimal = sexoAnimal!
-//            detailViewController.dataCriacao = dataCriacao!
-//            detailViewController.dataUltimaAlteracao = dataUltimaAlteracao!
-//            detailViewController.usuario = usuario!
-//        }
-//    }
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -209,6 +187,9 @@ class OdontogramaListViewController: UITableViewController {
             editView.dataCriacao = dataCriacao!
             editView.dataUltimaAlteracao = dataUltimaAlteracao!
             editView.usuario = usuario!
+            
+            gUsuario = usuario!
+            gOdontogramaId = id!
             
         }
     }
