@@ -90,8 +90,8 @@ class OdontogramaDetailViewController: UIViewController {
         let txtMensagem = camposValidos()
         if (txtMensagem == "") {
             
-            // A linha abaixo retorna a idade da base de dados!!!
-            let key = id == "" ? self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)).childByAutoId().key : id
+            // A linha abaixo retorna a idade da base de dados???
+            let key = id == "" ? self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)!).childByAutoId().key : id
         
             //let key = self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)).childByAutoId().key
         
@@ -142,9 +142,7 @@ class OdontogramaDetailViewController: UIViewController {
             default:
                 break
         }
-        if (Int(lblIdadeAnimal.text!)! > 0) {
-            idadeAnimal = Int(lblIdadeAnimal.text!)!
-        } else {
+        if (Int(lblIdadeAnimal.text!)! == 0 && Int(lblIdadeAnimalMeses.text!)! == 0) {
             txtMensagemErro = "A idade do animal não pode ser 0."
         }
         if (txtNomeAnimal.text != "") {

@@ -237,7 +237,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Odontogramas" id="xtQ-AA-pB6">
                         <rightBarButtonItems>
-                            <barButtonItem title="Logout" style="plain" id="Kha-SX-r9o">
+                            <barButtonItem title="Sair" style="plain" id="Kha-SX-r9o">
                                 <connections>
                                     <action selector="didTapLogout:" destination="a6w-fR-Oax" id="COP-2R-obX"/>
                                 </connections>
@@ -573,7 +573,7 @@
         <scene sceneID="lRA-0N-1ij">
             <objects>
                 <collectionViewController id="Bzb-la-Xpa" customClass="OdontogramaImagesViewController" customModule="odontozoo_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Cju-Po-ZoB" userLabel="Odontograma Images Collection View">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Cju-Po-ZoB" userLabel="Odontograma Images Collection View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -648,6 +648,25 @@
             </objects>
             <point key="canvasLocation" x="3799" y="520"/>
         </scene>
+        <!--Denticao-->
+        <scene sceneID="JN3-bn-zIC">
+            <objects>
+                <viewController id="6Dc-Zg-qgK" userLabel="Denticao" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Ku-pP-nBI"/>
+                        <viewControllerLayoutGuide type="bottom" id="AeF-4E-XwO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U3R-Vl-a7o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dentição" image="tooth" selectedImage="tooth" id="PbN-oL-bmZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4E-f1-EEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4736" y="46"/>
+        </scene>
         <!--Camera-->
         <scene sceneID="8y3-5c-Rbo">
             <objects>
@@ -661,10 +680,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X3v-NP-CjA">
-                                <rect key="frame" x="0.0" y="40" width="414" height="603"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="510"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gA7-wa-glW">
-                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnA-3f-Gxu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -698,7 +717,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-eh-yNQ">
-                                <rect key="frame" x="0.0" y="20" width="414" height="20"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagem do Odontograma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxr-X7-Lto">
                                         <rect key="frame" x="10" y="0.0" width="394" height="20"/>
@@ -781,6 +800,7 @@
                         <segue destination="8qB-xm-SzZ" kind="relationship" relationship="viewControllers" id="XE5-e9-A7Z"/>
                         <segue destination="Bzb-la-Xpa" kind="relationship" relationship="viewControllers" id="SCE-Sn-g3g"/>
                         <segue destination="0ux-nR-DTS" kind="relationship" relationship="viewControllers" id="Kia-ri-UJc"/>
+                        <segue destination="6Dc-Zg-qgK" kind="relationship" relationship="viewControllers" id="1sv-e8-rtx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNv-Ie-OLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -794,11 +814,12 @@
         <image name="odontozoo" width="76" height="76"/>
         <image name="ok" width="30" height="30"/>
         <image name="photo_gallery_29x29.png" width="29" height="29"/>
+        <image name="tooth" width="20" height="20"/>
         <image name="trash" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SUL-ni-QUy"/>
         <segue reference="JS8-4I-uUS"/>
-        <segue reference="Sgj-Bc-qNC"/>
+        <segue reference="SUL-ni-QUy"/>
+        <segue reference="Kia-ri-UJc"/>
     </inferredMetricsTieBreakers>
 </document>

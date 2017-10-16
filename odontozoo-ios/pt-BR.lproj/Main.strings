@@ -3,7 +3,7 @@
 "2pd-Yu-yGJ.text" = "Digite a raça do animal";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "3XA-Nb-89G"; */
-"3XA-Nb-89G.text" = "Detail";
+"3XA-Nb-89G.text" = "Detalhe";
 
 /* Class = "UIButton"; normalTitle = "REGISTRE-SE"; ObjectID = "6R3-pm-lPq"; */
 "6R3-pm-lPq.normalTitle" = "REGISTRE-SE";
@@ -18,7 +18,7 @@
 "9Ui-Hv-skA.normalTitle" = "FAÇA LOGIN";
 
 /* Class = "UILabel"; text = "J[A TEM CONTA?"; ObjectID = "AO4-SH-U8g"; */
-"AO4-SH-U8g.text" = "J[A TEM CONTA?";
+"AO4-SH-U8g.text" = "Já TEM CONTA?";
 
 /* Class = "UILabel"; text = "Raça do Animal"; ObjectID = "C4a-ch-epr"; */
 "C4a-ch-epr.text" = "Raça do Animal";
@@ -30,7 +30,7 @@
 "H7a-As-mZT.title" = "Cadastro";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "Hxb-iv-fga"; */
-"Hxb-iv-fga.text" = "Title";
+"Hxb-iv-fga.text" = "Título";
 
 /* Class = "UILabel"; text = "Data da Criação"; ObjectID = "JIZ-BW-KvH"; */
 "JIZ-BW-KvH.text" = "Data da Criação";
@@ -51,7 +51,7 @@
 "KIb-jT-fNx.text" = "Digite o nome do animal";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "ORm-Lm-QEe"; */
-"ORm-Lm-QEe.placeholder" = "Password";
+"ORm-Lm-QEe.placeholder" = "Senha";
 
 /* Class = "UILabel"; text = "Nome do Proprietário"; ObjectID = "OX8-05-lrI"; */
 "OX8-05-lrI.text" = "Nome do Proprietário";
@@ -93,7 +93,7 @@
 "dNj-hY-4LA.normalTitle" = "ESQUECEU SUA SENHA?";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "eTO-eN-DPg"; */
-"eTO-eN-DPg.placeholder" = "Password";
+"eTO-eN-DPg.placeholder" = "Senha";
 
 /* Class = "UILabel"; text = "anos"; ObjectID = "fK2-Uy-91y"; */
 "fK2-Uy-91y.text" = "anos";

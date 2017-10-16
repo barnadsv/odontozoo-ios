@@ -10,14 +10,14 @@ import Foundation
 
 class Utils {
     
-    static func encodeEmail(email: String) -> String {
+    static func encodeEmail(email: String) -> String? {
         let encodedEmail = String(email.characters.map {
             $0 == "." ? "," : $0
         })
         return encodedEmail
     }
     
-    static func decodeEmail(email: String) -> String {
+    static func decodeEmail(email: String) -> String? {
         let decodedEmail = String(email.characters.map {
             $0 == "," ? "." : $0
         })

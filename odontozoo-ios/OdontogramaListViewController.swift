@@ -17,10 +17,11 @@ var gImageStorageId: String!
 class OdontogramaListViewController: UITableViewController {
     
     var odontogramas: [Odontograma] = []
-    let odontogramasRef = Database.database().reference(withPath: "odontogramasList/")
+    var odontogramasRef = Database.database().reference(withPath: "odontogramasList/")
     let imagesRef = Database.database().reference(withPath: "odontogramaImagesList/")
     let usuarioRef = Database.database().reference(withPath: "usuarios")
     var usuario: Usuario!
+//    var encodedEmail: String = ""
     //var logouComSenha: Bool!
     var id: String?
     var emailUsuario: String?
@@ -42,13 +43,16 @@ class OdontogramaListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let nav = UINavigationController(rootViewController: self)
-//        nav.navigationBar.barTintColor = UIColor.red
-//        nav.navigationBar.tintColor = UIColor.white
+
         
         tableView.allowsMultipleSelectionDuringEditing = false
         
+//        if (gUsuario != nil && gUsuario.email != "") {
+//            encodedEmail = Utils.encodeEmail(email: gUsuario.email)!
+//        }
+        
+        
+        //odontogramasRef.child(encodedEmail).observe(DataEventType.value, with: { (snapshot) in
         odontogramasRef.observe(DataEventType.value, with: { (snapshot) in
             
             if snapshot.childrenCount > 0 {
@@ -98,31 +102,40 @@ class OdontogramaListViewController: UITableViewController {
                             dataUltimaAlteracao: (dataUltimaAlteracao)
                         )
                         
-                        self.odontogramas.append(odontograma)
-                        
-                        
+                        // Por enquanto, apenas os odontogramas do usuário autenticado carregam
+                        // Se houver compartilhamento de odontogramas, carregará também os odontogramas de outros usuários
+                        if (odontograma.emailUsuario == gUsuario.email) {
+                            self.odontogramas.append(odontograma)
+                        }
+                    
                     }
                     
                 }
-                self.odontogramas = self.odontogramas.sorted(by: { $0.nomeAnimal < $1.nomeAnimal })
+                //self.odontogramas = self.odontogramas.sorted(by: { $0.nomeAnimal < $1.nomeAnimal })
                 self.tableView.reloadData()
             }
         })
+        
+        //}
         
         Auth.auth().addStateDidChangeListener { auth, user in
             guard user != nil else { return }
             if (self.usuario == nil) {
                 self.usuario = Usuario()
                 self.usuario.email = (user?.email!)!
-                self.usuario.nome = (user?.displayName!)!
+//                if (user?.displayName! != nil) {
+//                    self.usuario.nome = (user?.displayName!)!
+//                }
                 //Pegar as outras variaveis de usuario no Firebase!
                 let encodedEmail = Utils.encodeEmail(email: self.usuario.email)
-                self.usuarioRef.child(encodedEmail).observeSingleEvent(of: .value, with: { (snapshot) in
+                self.usuarioRef.child(encodedEmail!).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
+                    self.usuario.nome = value?["name"] as! String
                     self.usuario.logouComSenha = value?["logouComSenha"] as? Bool ?? false
                     let dataCadastroTimestamp = value?["dataCadastro"] as! [String : Double]
                     self.usuario.dataCadastro = NSDate(timeIntervalSince1970: dataCadastroTimestamp["timestamp"]!/1000)
                 })
+                gUsuario = self.usuario
             }
         }
     }
@@ -223,7 +236,7 @@ class OdontogramaListViewController: UITableViewController {
                 }
             })
             self.imagesRef.child(id).removeValue()
-            self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)+"/"+id).removeValue()
+            self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)!+"/"+id).removeValue()
             self.odontogramas.remove(at: indexPath.row)
             self.tableView.reloadData()
             

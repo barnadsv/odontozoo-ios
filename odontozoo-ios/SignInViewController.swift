@@ -76,10 +76,10 @@ class SignInViewController: UIViewController {
                             return
                         }
                         let encodedEmail = Utils.encodeEmail(email: email)
-                        self.ref.child("usuarios").child(encodedEmail).observeSingleEvent(of: .value, with: { (snapshot) in
+                        self.ref.child("usuarios").child(encodedEmail!).observeSingleEvent(of: .value, with: { (snapshot) in
                             // Check if user already exists
                             guard !snapshot.exists() else {
-                                self.ref.child("usuarios/"+encodedEmail+"/logouComSenha").setValue(true)
+                                self.ref.child("usuarios/"+encodedEmail!+"/logouComSenha").setValue(true)
                                 let value = snapshot.value as? NSDictionary
                                 let nome = value?["nome"] as? String ?? ""
                                 //let dataCadastro = value?["dataCadastro"] as? ["String":"Double"]
