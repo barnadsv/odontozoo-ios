@@ -15,6 +15,9 @@ class OdontogramaDetailViewController: UIViewController {
     let odontogramasRef = Database.database().reference(withPath: "odontogramasList/")
     let usuarioRef = Database.database().reference(withPath: "usuarios")
     
+    var idadeAnimalAnos: Int = 0
+    var idadeAnimalMeses: Int = 0
+    
     public var id: String = ""
     public var emailUsuario: String = ""
     public var nomeUsuario: String = ""
@@ -67,15 +70,27 @@ class OdontogramaDetailViewController: UIViewController {
     
     @IBOutlet weak var lblIdadeAnimal: UILabel!
     @IBOutlet weak var stepperIdadeAnimal: UIStepper!
+    
     @IBAction func changeIdadeAnimal(_ sender: Any) {
-        idadeAnimal = Int(stepperIdadeAnimal.value)
-        lblIdadeAnimal.text = String(idadeAnimal)
+        idadeAnimalAnos = Int(stepperIdadeAnimal.value)
+        lblIdadeAnimal.text = String(idadeAnimalAnos)
+//        idadeAnimal = idadeAnimalAnos * 12 + idadeAnimalMeses
     }
     
+    @IBOutlet weak var lblIdadeAnimalMeses: UILabel!
+    @IBOutlet weak var stepperIdadeAnimalMeses: UIStepper!
+    
+    @IBAction func changeIdadeAnimalMeses(_ sender: Any) {
+        idadeAnimalMeses = Int(stepperIdadeAnimalMeses.value)
+        lblIdadeAnimalMeses.text = String(idadeAnimalMeses)
+//        idadeAnimal = idadeAnimalAnos * 12 + idadeAnimalMeses
+    }
     @IBAction func didTapSave(_ sender: Any) {
         
         let txtMensagem = camposValidos()
         if (txtMensagem == "") {
+            
+            // A linha abaixo retorna a idade da base de dados!!!
             let key = id == "" ? self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)).childByAutoId().key : id
         
             //let key = self.odontogramasRef.child(Utils.encodeEmail(email: self.usuario.email)).childByAutoId().key
@@ -84,6 +99,8 @@ class OdontogramaDetailViewController: UIViewController {
                 dataCriacao = NSDate()
             }
             dataUltimaAlteracao = NSDate()
+            
+            idadeAnimal = idadeAnimalAnos * 12 + idadeAnimalMeses
             
             let novoOdontograma = ["dataCriacao": ["timestamp": Double(Int((dataCriacao?.timeIntervalSince1970)!*1000))],
                                "dataUltimaAlteracao": ["timestamp":Double(Int((dataUltimaAlteracao?.timeIntervalSince1970)!*1000))],
@@ -188,11 +205,18 @@ class OdontogramaDetailViewController: UIViewController {
             default:
                 break
         }
-        lblIdadeAnimal.text = String(idadeAnimal)
-        stepperIdadeAnimal.value = Double(idadeAnimal)
+        idadeAnimalAnos = Int(floor(Double(idadeAnimal/12)))
+        idadeAnimalMeses = idadeAnimal - idadeAnimalAnos * 12
         
-//        stepperIdadeAnimal.value = Double(idadeAnimal)
-//        stepperIdadeAnimal.autorepeat = true
+        lblIdadeAnimal.text = String(idadeAnimalAnos)
+        stepperIdadeAnimal.value = Double(idadeAnimalAnos)
+        stepperIdadeAnimal.autorepeat = true
+        
+        lblIdadeAnimalMeses.text = String(idadeAnimalMeses)
+        stepperIdadeAnimalMeses.value = Double(idadeAnimalMeses)
+        stepperIdadeAnimalMeses.autorepeat = true
+        
+        
         txtNomeProprietario.text = nomeProprietario
         
         let dateFormatter = DateFormatter()

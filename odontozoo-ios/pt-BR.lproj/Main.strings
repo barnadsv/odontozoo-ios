@@ -1,0 +1,126 @@
+
+/* Class = "UITextField"; text = "Digite a raça do animal"; ObjectID = "2pd-Yu-yGJ"; */
+"2pd-Yu-yGJ.text" = "Digite a raça do animal";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "3XA-Nb-89G"; */
+"3XA-Nb-89G.text" = "Detail";
+
+/* Class = "UIButton"; normalTitle = "REGISTRE-SE"; ObjectID = "6R3-pm-lPq"; */
+"6R3-pm-lPq.normalTitle" = "REGISTRE-SE";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "73Q-gH-h2i"; */
+"73Q-gH-h2i.text" = "0";
+
+/* Class = "UILabel"; text = "Data da Última Alteração"; ObjectID = "7Ce-Yt-0wo"; */
+"7Ce-Yt-0wo.text" = "Data da Última Alteração";
+
+/* Class = "UIButton"; normalTitle = "FAÇA LOGIN"; ObjectID = "9Ui-Hv-skA"; */
+"9Ui-Hv-skA.normalTitle" = "FAÇA LOGIN";
+
+/* Class = "UILabel"; text = "J[A TEM CONTA?"; ObjectID = "AO4-SH-U8g"; */
+"AO4-SH-U8g.text" = "J[A TEM CONTA?";
+
+/* Class = "UILabel"; text = "Raça do Animal"; ObjectID = "C4a-ch-epr"; */
+"C4a-ch-epr.text" = "Raça do Animal";
+
+/* Class = "UILabel"; text = "Sexo do Animal"; ObjectID = "CDX-gn-Dhs"; */
+"CDX-gn-Dhs.text" = "Sexo do Animal";
+
+/* Class = "UITabBarItem"; title = "Cadastro"; ObjectID = "H7a-As-mZT"; */
+"H7a-As-mZT.title" = "Cadastro";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Hxb-iv-fga"; */
+"Hxb-iv-fga.text" = "Title";
+
+/* Class = "UILabel"; text = "Data da Criação"; ObjectID = "JIZ-BW-KvH"; */
+"JIZ-BW-KvH.text" = "Data da Criação";
+
+/* Class = "UIButton"; normalTitle = "Registrar-se"; ObjectID = "Jsn-i8-zES"; */
+"Jsn-i8-zES.normalTitle" = "Registrar-se";
+
+/* Class = "UILabel"; text = "Data da Última Alteração"; ObjectID = "K3w-Nx-6Qw"; */
+"K3w-Nx-6Qw.text" = "Data da Última Alteração";
+
+/* Class = "UILabel"; text = "Imagens do Odontograma"; ObjectID = "K4o-dD-iEa"; */
+"K4o-dD-iEa.text" = "Imagens do Odontograma";
+
+/* Class = "UITextField"; text = "Digite o nome do proprietário do animal"; ObjectID = "K6V-VY-UKQ"; */
+"K6V-VY-UKQ.text" = "Digite o nome do proprietário do animal";
+
+/* Class = "UITextField"; text = "Digite o nome do animal"; ObjectID = "KIb-jT-fNx"; */
+"KIb-jT-fNx.text" = "Digite o nome do animal";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "ORm-Lm-QEe"; */
+"ORm-Lm-QEe.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Nome do Proprietário"; ObjectID = "OX8-05-lrI"; */
+"OX8-05-lrI.text" = "Nome do Proprietário";
+
+/* Class = "UIButton"; normalTitle = "FAZER LOGIN"; ObjectID = "PeA-Kp-pwa"; */
+"PeA-Kp-pwa.normalTitle" = "FAZER LOGIN";
+
+/* Class = "UILabel"; text = "Detalhes do Odontograma"; ObjectID = "Pfb-LJ-Nhp"; */
+"Pfb-LJ-Nhp.text" = "Detalhes do Odontograma";
+
+/* Class = "UILabel"; text = "SEM CONTA?"; ObjectID = "QZa-3a-SCT"; */
+"QZa-3a-SCT.text" = "SEM CONTA?";
+
+/* Class = "UITabBarItem"; title = "Câmera"; ObjectID = "RZq-BF-Ulm"; */
+"RZq-BF-Ulm.title" = "Câmera";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "SCj-IN-Y96"; */
+"SCj-IN-Y96.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Salvar"; ObjectID = "TAA-Mi-pKO"; */
+"TAA-Mi-pKO.normalTitle" = "Salvar";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "U3f-pQ-LoM"; */
+"U3f-pQ-LoM.placeholder" = "Email";
+
+/* Class = "UISegmentedControl"; UhY-dY-8JA.segmentTitles[0] = "Macho"; ObjectID = "UhY-dY-8JA"; */
+"UhY-dY-8JA.segmentTitles[0]" = "Macho";
+
+/* Class = "UISegmentedControl"; UhY-dY-8JA.segmentTitles[1] = "Fêmea"; ObjectID = "UhY-dY-8JA"; */
+"UhY-dY-8JA.segmentTitles[1]" = "Fêmea";
+
+/* Class = "UILabel"; text = "Idade do Animal"; ObjectID = "ZOJ-Nf-hgK"; */
+"ZOJ-Nf-hgK.text" = "Idade do Animal";
+
+/* Class = "UITabBarItem"; title = "Imagens"; ObjectID = "aVt-QW-AUQ"; */
+"aVt-QW-AUQ.title" = "Imagens";
+
+/* Class = "UIButton"; normalTitle = "ESQUECEU SUA SENHA?"; ObjectID = "dNj-hY-4LA"; */
+"dNj-hY-4LA.normalTitle" = "ESQUECEU SUA SENHA?";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "eTO-eN-DPg"; */
+"eTO-eN-DPg.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "anos"; ObjectID = "fK2-Uy-91y"; */
+"fK2-Uy-91y.text" = "anos";
+
+/* Class = "UILabel"; text = "Nome do Animal"; ObjectID = "gCj-P5-sbE"; */
+"gCj-P5-sbE.text" = "Nome do Animal";
+
+/* Class = "UILabel"; text = "Imagem do Odontograma"; ObjectID = "gxr-X7-Lto"; */
+"gxr-X7-Lto.text" = "Imagem do Odontograma";
+
+/* Class = "UILabel"; text = "Data da criação"; ObjectID = "lbY-jY-ZBK"; */
+"lbY-jY-ZBK.text" = "Data da criação";
+
+/* Class = "UISegmentedControl"; mc8-X2-4Jk.segmentTitles[0] = "Canina"; ObjectID = "mc8-X2-4Jk"; */
+"mc8-X2-4Jk.segmentTitles[0]" = "Canina";
+
+/* Class = "UISegmentedControl"; mc8-X2-4Jk.segmentTitles[1] = "Felina"; ObjectID = "mc8-X2-4Jk"; */
+"mc8-X2-4Jk.segmentTitles[1]" = "Felina";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "n9q-i5-agw"; */
+"n9q-i5-agw.text" = "0";
+
+/* Class = "UILabel"; text = "meses"; ObjectID = "ofi-md-CBg"; */
+"ofi-md-CBg.text" = "meses";
+
+/* Class = "UILabel"; text = "Família do Animal"; ObjectID = "sgO-uv-OLn"; */
+"sgO-uv-OLn.text" = "Família do Animal";
+
+/* Class = "UINavigationItem"; title = "Odontogramas"; ObjectID = "xtQ-AA-pB6"; */
+"xtQ-AA-pB6.title" = "Odontogramas";
