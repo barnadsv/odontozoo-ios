@@ -17,7 +17,7 @@
 /* Class = "UIButton"; normalTitle = "FAÇA LOGIN"; ObjectID = "9Ui-Hv-skA"; */
 "9Ui-Hv-skA.normalTitle" = "INICIO";
 
-/* Class = "UILabel"; text = "J[A TEM CONTA?"; ObjectID = "AO4-SH-U8g"; */
+/* Class = "UILabel"; text = "JA TEM CONTA?"; ObjectID = "AO4-SH-U8g"; */
 "AO4-SH-U8g.text" = "¿YA TIENE CUENTA?";
 
 /* Class = "UILabel"; text = "Raça do Animal"; ObjectID = "C4a-ch-epr"; */
@@ -50,11 +50,17 @@
 /* Class = "UITextField"; text = "Digite o nome do animal"; ObjectID = "KIb-jT-fNx"; */
 "KIb-jT-fNx.text" = "Introduzca el nombre del animal";
 
+/* Class = "UIBarButtonItem"; title = "Sair"; ObjectID = "Kha-SX-r9o"; */
+"Kha-SX-r9o.title" = "Salir";
+
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "ORm-Lm-QEe"; */
 "ORm-Lm-QEe.placeholder" = "Contraseña";
 
 /* Class = "UILabel"; text = "Nome do Proprietário"; ObjectID = "OX8-05-lrI"; */
 "OX8-05-lrI.text" = "Nombre del Proprietario";
+
+/* Class = "UITabBarItem"; title = "Dentição"; ObjectID = "PbN-oL-bmZ"; */
+"PbN-oL-bmZ.title" = "Dentición";
 
 /* Class = "UIButton"; normalTitle = "FAZER LOGIN"; ObjectID = "PeA-Kp-pwa"; */
 "PeA-Kp-pwa.normalTitle" = "INICIO";
@@ -95,8 +101,8 @@
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "eTO-eN-DPg"; */
 "eTO-eN-DPg.placeholder" = "Contraseña";
 
-/* Class = "UILabel"; text = "anos"; ObjectID = "fK2-Uy-91y"; */
-"fK2-Uy-91y.text" = "años";
+/* Class = "UILabel"; text = "ano(s)"; ObjectID = "fK2-Uy-91y"; */
+"fK2-Uy-91y.text" = "año(s)";
 
 /* Class = "UILabel"; text = "Nome do Animal"; ObjectID = "gCj-P5-sbE"; */
 "gCj-P5-sbE.text" = "Nombre del Animal";
@@ -116,11 +122,13 @@
 /* Class = "UILabel"; text = "0"; ObjectID = "n9q-i5-agw"; */
 "n9q-i5-agw.text" = "0";
 
-/* Class = "UILabel"; text = "meses"; ObjectID = "ofi-md-CBg"; */
-"ofi-md-CBg.text" = "meses";
+/* Class = "UILabel"; text = "mes(es)"; ObjectID = "ofi-md-CBg"; */
+"ofi-md-CBg.text" = "mes(es)";
 
 /* Class = "UILabel"; text = "Família do Animal"; ObjectID = "sgO-uv-OLn"; */
 "sgO-uv-OLn.text" = "Familia del Animal";
 
 /* Class = "UINavigationItem"; title = "Odontogramas"; ObjectID = "xtQ-AA-pB6"; */
 "xtQ-AA-pB6.title" = "Odontogramas";
+
+

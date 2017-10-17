@@ -33,7 +33,7 @@ class OdontogramaDetailViewController: UIViewController {
     public var dataUltimaAlteracao: NSDate? = nil
     public var usuario: Usuario!
     
-    public var tituloView: String = "Detalhes do Odontograma"
+    public var tituloView: String = NSLocalizedString("Detalhes do Odontograma", comment: "")
 
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var txtNomeAnimal: UITextField!
@@ -117,7 +117,7 @@ class OdontogramaDetailViewController: UIViewController {
         
             let childUpdate = ["\(Utils.encodeEmail(email: self.usuario.email))/\(key)": novoOdontograma]
             odontogramasRef.updateChildValues(childUpdate)
-            self.showAlert("Odontograma salvo com sucesso!")
+            self.showAlert(NSLocalizedString("Odontograma salvo com sucesso!", comment: ""))
         } else {
             self.showAlert(txtMensagem)
         }
@@ -143,22 +143,22 @@ class OdontogramaDetailViewController: UIViewController {
                 break
         }
         if (Int(lblIdadeAnimal.text!)! == 0 && Int(lblIdadeAnimalMeses.text!)! == 0) {
-            txtMensagemErro = "A idade do animal não pode ser 0."
+            txtMensagemErro = NSLocalizedString("A idade do animal não pode ser 0.", comment: "")
         }
         if (txtNomeAnimal.text != "") {
             nomeAnimal = txtNomeAnimal.text!
         } else {
-            txtMensagemErro = "O nome do animal é obrigatório."
+            txtMensagemErro = NSLocalizedString("O nome do animal é obrigatório.", comment: "")
         }
         if (txtNomeProprietario.text != "") {
             nomeProprietario = txtNomeProprietario.text!
         } else {
-            txtMensagemErro = "O nome do proprietário é obrigatório."
+            txtMensagemErro = NSLocalizedString("O nome do proprietário é obrigatório.", comment: "")
         }
         if (txtRacaAnimal.text != "") {
             racaAnimal = txtRacaAnimal.text!
         } else {
-            txtMensagemErro = "A raça do animal é obrigatória."
+            txtMensagemErro = NSLocalizedString("A raça do animal é obrigatória.", comment: "")
         }
         switch segSexoAnimal.selectedSegmentIndex {
             case 0:

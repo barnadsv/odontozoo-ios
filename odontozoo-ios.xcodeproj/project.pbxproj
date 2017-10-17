@@ -28,6 +28,7 @@
 		A76C02F61F8ADFE9008F113B /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A76C02F21F8ADFE9008F113B /* iTunesArtwork@3x.png */; };
 		A76C02F71F8ADFE9008F113B /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = A76C02F31F8ADFE9008F113B /* AppIcon.appiconset */; };
 		A77CAD061F92AF1E000657BD /* OdontogramaCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77CAD051F92AF1E000657BD /* OdontogramaCameraViewController.swift */; };
+		A79BB8451F958BE9003E6290 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A79BB8471F958BE9003E6290 /* Localizable.strings */; };
 		A7AA702F1F80543D00835DF2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA702E1F80543D00835DF2 /* RegisterViewController.swift */; };
 		A7AA70331F80593500835DF2 /* UIViewController+Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70301F80593500835DF2 /* UIViewController+Alerts.m */; };
 		A7AA70361F80662C00835DF2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AA70351F80662C00835DF2 /* SignInViewController.swift */; };
@@ -94,10 +95,12 @@
 		A76C02F21F8ADFE9008F113B /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@3x.png"; path = "odontozoo-ios/Assets.xcassets/iTunesArtwork@3x.png"; sourceTree = "<group>"; };
 		A76C02F31F8ADFE9008F113B /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = "odontozoo-ios/Assets.xcassets/AppIcon.appiconset"; sourceTree = "<group>"; };
 		A77CAD051F92AF1E000657BD /* OdontogramaCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdontogramaCameraViewController.swift; sourceTree = "<group>"; };
-		A7A825021F945359003574B2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		A7A825031F945359003574B2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		A7A825041F945371003574B2 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
-		A7A825051F945371003574B2 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A79BB8341F957EB1003E6290 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		A79BB8351F957EB1003E6290 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A79BB8361F95879B003E6290 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		A79BB8371F95879B003E6290 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A79BB8461F958BE9003E6290 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A79BB8481F958C51003E6290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A7AA702E1F80543D00835DF2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A7AA70301F80593500835DF2 /* UIViewController+Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alerts.m"; sourceTree = "<group>"; };
 		A7AA70311F80593500835DF2 /* UIViewController+Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alerts.h"; sourceTree = "<group>"; };
@@ -198,6 +201,7 @@
 				A75521CF1F92448400B22C1E /* OdontogramaImagesHeaderView.swift */,
 				A72FAA011F928AD300A1A5D0 /* OdontogramaImageViewController.swift */,
 				A77CAD051F92AF1E000657BD /* OdontogramaCameraViewController.swift */,
+				A79BB8471F958BE9003E6290 /* Localizable.strings */,
 			);
 			path = "odontozoo-ios";
 			sourceTree = "<group>";
@@ -366,6 +370,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = A73767C71F79615400AE7A38;
 			productRefGroup = A73767D11F79615400AE7A38 /* Products */;
@@ -392,6 +397,7 @@
 				A76C02F51F8ADFE9008F113B /* iTunesArtwork@2x.png in Resources */,
 				A73768051F7A113E00AE7A38 /* GoogleService-Info.plist in Resources */,
 				A76C02F61F8ADFE9008F113B /* iTunesArtwork@3x.png in Resources */,
+				A79BB8451F958BE9003E6290 /* Localizable.strings in Resources */,
 				A72FAA001F92659200A1A5D0 /* camera-40x40@1x.png in Resources */,
 				A7B2F2FE1F9067B300098E69 /* edit_29x29.png in Resources */,
 				A73767D91F79615500AE7A38 /* Main.storyboard in Resources */,
@@ -635,8 +641,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				A73767D81F79615500AE7A38 /* Base */,
-				A7A825021F945359003574B2 /* es */,
-				A7A825041F945371003574B2 /* pt-BR */,
+				A79BB8341F957EB1003E6290 /* pt-BR */,
+				A79BB8361F95879B003E6290 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -645,10 +651,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				A73767E01F79615500AE7A38 /* Base */,
-				A7A825031F945359003574B2 /* es */,
-				A7A825051F945371003574B2 /* pt-BR */,
+				A79BB8351F957EB1003E6290 /* pt-BR */,
+				A79BB8371F95879B003E6290 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A79BB8471F958BE9003E6290 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A79BB8461F958BE9003E6290 /* es */,
+				A79BB8481F958C51003E6290 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

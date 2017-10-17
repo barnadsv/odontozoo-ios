@@ -18,6 +18,7 @@ class OdontogramaImagesHeaderView: UICollectionReusableView, UINavigationControl
     
     @IBOutlet weak var btCamera: UIButton!
     
+    
     @IBAction func didTapCameraButton(_ sender: Any) {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {

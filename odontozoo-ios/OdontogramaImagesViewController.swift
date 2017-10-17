@@ -228,7 +228,7 @@ extension OdontogramaImagesViewController {
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
                                                                              withReuseIdentifier: "OdontogramaImagesHeaderView",
                                                                              for: indexPath) as! OdontogramaImagesHeaderView
-            headerView.lblTitulo.text = "Imagens do Odontograma"
+            headerView.lblTitulo.text = NSLocalizedString("Imagens do Odontograma", comment: "")
             return headerView
         default:
             //4

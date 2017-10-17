@@ -64,9 +64,9 @@ class SignInViewController: UIViewController {
                                     switch errCode {
                                     case .userNotFound:
                                         //self.showAlert("Conta de usuário não encontrada. Registre-se.")
-                                        self.showAlert("Combinação usuário/senha incorreta.")
+                                        self.showAlert(NSLocalizedString("Combinação usuário/senha incorreta.", comment: ""))
                                     case .wrongPassword:
-                                        self.showAlert("Combinação usuário/senha incorreta.")
+                                        self.showAlert(NSLocalizedString("Combinação usuário/senha incorreta.", comment: ""))
                                     default:
                                         self.showAlert("Erro: \(error.localizedDescription)")
                                     }
@@ -107,7 +107,7 @@ class SignInViewController: UIViewController {
                 // [END headless_email_auth]
             }
         } else {
-            self.showAlert("email/senha não podem ser vazios.")
+            self.showAlert(NSLocalizedString("Email/senha não podem ser vazios.", comment: ""))
             //self.showMessagePrompt("email/senha não podem ser vazios.")
         }
         
@@ -141,7 +141,7 @@ class SignInViewController: UIViewController {
                                 switch errCode {
                                 case .userNotFound:
                                     DispatchQueue.main.async {
-                                        self.showAlert("Conta de usuário não encontrada.")
+                                        self.showAlert(NSLocalizedString("Conta de usuário não encontrada.", comment: ""))
                                     }
                                 default:
                                     DispatchQueue.main.async {
@@ -152,7 +152,7 @@ class SignInViewController: UIViewController {
                             return
                         } else {
                             DispatchQueue.main.async {
-                                self.showAlert("Você receberá um e-mail em breve para redefinir sua senha.")
+                                self.showAlert(NSLocalizedString("Você receberá um e-mail em breve para redefinir sua senha.", comment: ""))
                             }
                         }
                     }

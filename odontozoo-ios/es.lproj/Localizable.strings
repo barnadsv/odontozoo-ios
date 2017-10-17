@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  odontozoo-ios
+
+  Created by Leonardo de Araujo Barnabe on 16/10/17.
+  Copyright © 2017 Leonardo de Araujo Barnabe. All rights reserved.
+*/
+
+/* SignIn */
+"Combinação usuário/senha incorreta." = "Combinación de usuario/contraseña incorrecta.";
+"Email/senha não podem ser vazios." = "Correo electrónico / contraseña no se pueden vacíos.";
+"Conta de usuário não encontrada." = "Cuenta de usuario no encontrada.";
+"Você receberá um e-mail em breve para redefinir sua senha." = "Recibirá un correo electrónico en breve para restablecer la contraseña.";
+"Odontograma salvo com sucesso!" = "Odontograma salvo con éxito!";
+
+/* Detail */
+"Detalhes do Odontograma" = "Detalles del Odontograma";
+"A idade do animal não pode ser 0." = "La edad del animal no puede ser o.";
+"O nome do animal é obrigatório." = "El nombre del animal es obligatorio";
+"O nome do proprietário é obrigatório." = "El nombre del proprietario es obligatorio";
+"A raça do animal é obrigatória." = "La raza del animal es obligatoria";
+
+"Imagens do Odontograma" = "Imágenes del Odontograma";

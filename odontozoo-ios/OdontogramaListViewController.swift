@@ -130,7 +130,7 @@ class OdontogramaListViewController: UITableViewController {
                 let encodedEmail = Utils.encodeEmail(email: self.usuario.email)
                 self.usuarioRef.child(encodedEmail!).observeSingleEvent(of: .value, with: { (snapshot) in
                     let value = snapshot.value as? NSDictionary
-                    self.usuario.nome = value?["name"] as! String
+                    //self.usuario.nome = value?["name"] as! String
                     self.usuario.logouComSenha = value?["logouComSenha"] as? Bool ?? false
                     let dataCadastroTimestamp = value?["dataCadastro"] as! [String : Double]
                     self.usuario.dataCadastro = NSDate(timeIntervalSince1970: dataCadastroTimestamp["timestamp"]!/1000)
